@@ -14,14 +14,13 @@ module.exports =
 		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted.md#on-mac-and-linux'
 	supportsBlink: true
 
-	options: [ networkOptions.group ]
-
 	yocto:
 		machine: 'qemux86-64'
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
 		version: 'yocto-jethro'
-		deployArtifact: 'resin-image-qemux86-64.resin-sdcard'
+		deployArtifact: 'resin-qemux86-64'
+		archive: true
 		compressed: true
 
 	configuration:
