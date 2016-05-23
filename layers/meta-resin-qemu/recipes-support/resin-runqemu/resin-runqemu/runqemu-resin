@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Get the absolute script location
+pushd `dirname $0` > /dev/null 2>&1
+SCRIPTPATH=`pwd`
+popd > /dev/null 2>&1
+
+export OECORE_NATIVE_SYSROOT=$SCRIPTPATH
+
+export PATH=$SCRIPTPATH:$PATH
+
+runqemu resin-image-qemux86.hddimg qemuparams="-m 512"

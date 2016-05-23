@@ -1,0 +1,22 @@
+Don't run qemu with -no-reboot for hddimg images as it works just fine.
+Tested on qemux86*.
+
+Signed-off-by: Andrei Gherzan <andrei@resin.io> 
+
+Index: 1.0-r0/runqemu-internal
+===================================================================
+--- 1.0-r0.orig/runqemu-internal
++++ 1.0-r0/runqemu-internal
+@@ -769,9 +769,10 @@ fi
+ 
+ echo "Running $QEMU..."
+ # -no-reboot is a mandatory option - see bug #100
++# For hddimg don't use -no-reboot as it works just fine (tested on qemux86*)
+ if [ "$FSTYPE" = "vmdk" -o "$FSTYPE" = "hddimg" -o "$FSTYPE" = "hdddirect" ]; then
+-    echo $QEMUBIN $VM $QEMUOPTIONS $SERIALOPTS -no-reboot $SCRIPT_QEMU_OPT $SCRIPT_QEMU_EXTRA_OPT
+-    LD_PRELOAD="$GL_LD_PRELOAD" $QEMUBIN $VM $QEMUOPTIONS $SERIALOPTS -no-reboot $SCRIPT_QEMU_OPT $SCRIPT_QEMU_EXTRA_OPT
++    echo $QEMUBIN $VM $QEMUOPTIONS $SERIALOPTS $SCRIPT_QEMU_OPT $SCRIPT_QEMU_EXTRA_OPT
++    LD_PRELOAD="$GL_LD_PRELOAD" $QEMUBIN $VM $QEMUOPTIONS $SERIALOPTS $SCRIPT_QEMU_OPT $SCRIPT_QEMU_EXTRA_OPT
+ elif [ "$FSTYPE" = "iso" ]; then
+     echo $QEMUBIN $QEMUOPTIONS $SERIALOPTS -no-reboot $SCRIPT_QEMU_OPT $SCRIPT_QEMU_EXTRA_OPT
+     LD_PRELOAD="$GL_LD_PRELOAD" $QEMUBIN $QEMUOPTIONS $SERIALOPTS -no-reboot $SCRIPT_QEMU_OPT $SCRIPT_QEMU_EXTRA_OPT
