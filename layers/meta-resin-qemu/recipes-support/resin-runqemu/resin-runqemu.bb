@@ -45,7 +45,8 @@ do_unpack_extra() {
 do_deploy() {
     deploydir=${DEPLOYDIR}/resin-runqemu
 
-    mkdir -p $deploydir/{${bindir_native},${sbindir_native}}
+    mkdir -p $deploydir/${bindir_native}
+    mkdir -p $deploydir/${sbindir_native}}
     for script in ${POKY_SCRIPTS}; do
         cp ${WORKDIR}/$script $deploydir
     done
