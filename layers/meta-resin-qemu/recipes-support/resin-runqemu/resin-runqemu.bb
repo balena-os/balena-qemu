@@ -11,11 +11,6 @@ S = "${WORKDIR}"
 
 inherit allarch deploy
 
-DEPENDS = " \
-    qemu-helper-native \
-    dhcp-native \
-    "
-
 POKY_SCRIPTS = " \
     runqemu \
     runqemu-internal \
@@ -60,6 +55,8 @@ do_deploy() {
     cp ${STAGING_BINDIR_NATIVE}/tunctl $deploydir/${bindir_native}/tunctl
     cp ${STAGING_SBINDIR_NATIVE}/dhcpd $deploydir/${sbindir_native}/dhcpd
 }
+
+do_deploy[depends] += "qemu-helper-native:do_populate_sysroot dhcp-native:do_populate_sysroot"
 
 addtask unpack_extra after do_unpack before do_patch
 addtask deploy before do_package after do_install
