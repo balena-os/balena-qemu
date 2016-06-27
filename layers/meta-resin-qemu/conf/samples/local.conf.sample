@@ -2,14 +2,14 @@
 #MACHINE ?= "qemux86"
 #MACHINE ?= "qemux86-64"
 
-# Set this to yes if staging build is desired
-#RESIN_STAGING_BUILD ?= "yes"
+# Set this to 1 if debug image is desired
+#DEBUG_IMAGE = "1"
 
 # Set this to make build system generate resinhup bundles
 #RESINHUP ?= "yes"
 
 # Set this to change the supervisor tag used
-#SUPERVISOR_TAG ?= "master"
+#TARGET_TAG ?= "master"
 
 # Compress final SD image with xz
 #RESIN_SDIMG_COMPRESSION ?= "xz"
@@ -31,6 +31,9 @@ DISTRO ?= "resin-systemd"
 # amounts of data stored in the data cache as well as on disk.
 # http://www.yoctoproject.org/docs/latest/mega-manual/mega-manual.html#ref-classes-rm-work
 #INHERIT += "rm_work"
+
+# Remove the old image before the new one is generated to save disk space when RM_OLD_IMAGE is set to 1, this is an easy way to keep the DEPLOY_DIR_IMAGE clean.
+RM_OLD_IMAGE = "1"
 
 # Package Management configuration
 PACKAGE_CLASSES ?= "package_rpm"
