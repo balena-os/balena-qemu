@@ -9,7 +9,7 @@ SRC_URI = " \
     "
 S = "${WORKDIR}"
 
-inherit allarch deploy
+inherit deploy
 
 POKY_SCRIPTS = " \
     runqemu \
@@ -50,7 +50,7 @@ do_deploy() {
     for script in ${POKY_SCRIPTS}; do
         cp ${WORKDIR}/$script $deploydir
     done
-    cp ${WORKDIR}/runqemu-resin $deploydir
+    sed "s/<MACHINE>/${MACHINE}/g" ${WORKDIR}/runqemu-resin > $deploydir/runqemu-resin
 
     # Deploy helper for qemu
     cp ${STAGING_BINDIR_NATIVE}/tunctl $deploydir/${bindir_native}/tunctl
@@ -61,3 +61,6 @@ do_deploy[depends] += "qemu-helper-native:do_populate_sysroot dhcp-native:do_pop
 
 addtask unpack_extra after do_unpack before do_patch
 addtask deploy before do_package after do_install
+
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+COMPATIBLE_MACHINE = "qemuall"

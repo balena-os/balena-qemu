@@ -9,4 +9,4 @@ export OECORE_NATIVE_SYSROOT=$SCRIPTPATH
 
 export PATH=$SCRIPTPATH:$PATH
 
-runqemu resin-image-qemux86.hddimg qemuparams="-m 512"
+runqemu resin-image-<MACHINE>.hddimg qemuparams="-m 512"
