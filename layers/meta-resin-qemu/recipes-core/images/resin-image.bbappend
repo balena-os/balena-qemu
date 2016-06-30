@@ -1,6 +1,3 @@
-# Install grub
-BURN_GRUB_qemuall = "1"
-
 IMAGE_FSTYPES_append_qemuall = " resin-sdcard"
 
 # Customize resin-sdcard
@@ -26,5 +23,9 @@ deploy_image_in_bundle() {
 
     # Deploy runqemu scripts
     cp -r ${RESIN_RUNQEMUDIR}/* ${RESIN_BUNDLEDIR}
+
+    # Handle GRUB installation
+    dd if=${DEPLOY_DIR_IMAGE}/grub/boot.img of=${RESIN_SDIMG} conv=notrunc bs=446 count=1
+    dd if=${DEPLOY_DIR_IMAGE}/grub/core.img of=${RESIN_SDIMG} conv=notrunc bs=512 seek=1
 }
 IMAGE_POSTPROCESS_COMMAND_append_qemuall = " deploy_image_in_bundle; "
