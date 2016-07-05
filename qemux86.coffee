@@ -39,7 +39,6 @@ module.exports =
 		fstype: 'resin-sdcard'
 		version: 'yocto-jethro'
 		deployArtifact: 'resin-image-qemux86.resin-sdcard'
-		archive: true
 		compressed: true
 
 
