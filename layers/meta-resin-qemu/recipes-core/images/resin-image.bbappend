@@ -1,8 +1,16 @@
-IMAGE_FSTYPES_append_qemuall = " resin-sdcard"
+IMAGE_FSTYPES_append_qemux86 = " resin-sdcard"
+IMAGE_FSTYPES_append_qemux86-64 = " resin-sdcard"
 
 # Customize resin-sdcard
-RESIN_IMAGE_BOOTLOADER_qemuall = "grub"
-RESIN_BOOT_PARTITION_FILES_qemuall = " \
+RESIN_IMAGE_BOOTLOADER_qemux86 = "grub"
+RESIN_BOOT_PARTITION_FILES_qemux86 = " \
+    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
+    grub:/grub/ \
+    grub/i386-pc:/grub/i386-pc/ \
+    "
+
+RESIN_IMAGE_BOOTLOADER_qemux86-64 = "grub"
+RESIN_BOOT_PARTITION_FILES_qemux86-64 = " \
     ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
     grub:/grub/ \
     grub/i386-pc:/grub/i386-pc/ \
@@ -11,7 +19,8 @@ RESIN_BOOT_PARTITION_FILES_qemuall = " \
 #
 # Deploy a bundle of files for qemu machines
 #
-EXTRA_IMAGEDEPENDS_append_qemuall = " resin-runqemu"
+EXTRA_IMAGEDEPENDS_append_qemux86 = " resin-runqemu"
+EXTRA_IMAGEDEPENDS_append_qemux86-64 = " resin-runqemu"
 RESIN_RUNQEMUDIR = "${DEPLOY_DIR_IMAGE}/resin-runqemu"
 RESIN_BUNDLEDIR = "${DEPLOY_DIR_IMAGE}/resin-${MACHINE}"
 deploy_image_in_bundle() {
@@ -28,4 +37,5 @@ deploy_image_in_bundle() {
     dd if=${DEPLOY_DIR_IMAGE}/grub/boot.img of=${RESIN_SDIMG} conv=notrunc bs=446 count=1
     dd if=${DEPLOY_DIR_IMAGE}/grub/core.img of=${RESIN_SDIMG} conv=notrunc bs=512 seek=1
 }
-IMAGE_POSTPROCESS_COMMAND_append_qemuall = " deploy_image_in_bundle; "
+IMAGE_POSTPROCESS_COMMAND_append_qemux86 = " deploy_image_in_bundle; "
+IMAGE_POSTPROCESS_COMMAND_append_qemux86-64 = " deploy_image_in_bundle; "
