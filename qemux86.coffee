@@ -4,7 +4,7 @@ deviceTypesCommon = require 'resin-device-types/common'
 module.exports =
 	slug: 'qemux86'
 	name: 'QEMU X86 32bit'
-	arch: 'amd64'
+	arch: 'i386'
 	state: 'experimental'
 
 	instructions: commonImg.instructions
