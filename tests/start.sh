@@ -28,6 +28,6 @@ if [ "${MACHINE}" == "qemux86-64" ]; then
 		--env device_type=${MACHINE} \
 		--env application_name=${MACHINE//-} \
 		--env image=/autohat/resin.img \
-		$AUTOHAT_IMAGE /bin/bash -c 'cd /autohat && robot --exitonerror qemux86-64.robot'
+		$AUTOHAT_IMAGE robot --exitonerror -d /autohat /autohat/qemux86-64.robot
 fi
 trap 'cleanup' EXIT
