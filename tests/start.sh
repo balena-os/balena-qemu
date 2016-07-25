@@ -10,7 +10,7 @@ DEPLOY_ARTIFACT=$(jq --raw-output '.yocto.deployArtifact' $DEVICE_TYPE_JSON)
 cp $(readlink --canonicalize $WORKSPACE/build/tmp/deploy/images/$MACHINE/$DEPLOY_ARTIFACT) $WORKSPACE/tests/autohat/resin.img
 AUTOHAT_IMAGE=autohat_$MACHINE\_$BUILD_NUMBER
 echo "==========Building Autohat image to run tests================="
-docker build -t $AUTOHAT_IMAGE .
+docker build -t $AUTOHAT_IMAGE --no-cache=true .
 cleanup() {
    rm $WORKSPACE/tests/autohat/resin.img
    docker rmi $AUTOHAT_IMAGE
