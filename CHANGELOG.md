@@ -1,6 +1,8 @@
 Change log
 -----------
 
+# v1.7.2 - 2016-07-26
+
 * Bump resin-yocto-scripts to current HEAD to include ability to run tests based on variable [Praneeth]
 
 # v1.7.1 - 2016-07-26
