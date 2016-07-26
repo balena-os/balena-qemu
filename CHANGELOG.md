@@ -1,6 +1,8 @@
 Change log
 -----------
 
+# v1.7.1 - 2016-07-26
+
 * No more debug images in staging
 
 # v1.7.0 - 2016-07-14
