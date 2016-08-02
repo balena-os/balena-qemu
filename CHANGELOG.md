@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v1.8.0 - 2016-08-02
+
+* Bump meta-resin to v1.8 [Andrei]
+
 # v1.7.2 - 2016-07-26
 
 * Bump resin-yocto-scripts to current HEAD to include ability to run tests based on variable [Praneeth]
