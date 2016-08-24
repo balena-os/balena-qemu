@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update resin-yocto-scripts for including kernel modules headers deploy [Florin]
+
 # v1.8.0 - 2016-08-02
 
 * Bump meta-resin to v1.8 [Andrei]
