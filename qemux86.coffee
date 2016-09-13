@@ -19,6 +19,7 @@ QEMU_RUNNING_INSTRUCTIONS = '''
 '''
 
 module.exports =
+	version: 1
 	slug: 'qemux86'
 	name: 'QEMU X86 32bit'
 	arch: 'i386'
@@ -45,8 +46,7 @@ module.exports =
 	configuration:
 		config:
 			partition:
-				primary: 4
-				logical: 1
+				primary: 1
 			path: '/config.json'
 
 	initialization: commonImg.initialization
