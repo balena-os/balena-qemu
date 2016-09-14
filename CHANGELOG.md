@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update tests/autohat - Fetching the new resin-cli and adding additional tests [Praneeth]
 * Update meta-resin [Florin]
 * Change .coffee to announce partition 1 now holds config.json and also introduce versioning (v1) [Florin]
 
