@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v1.12.0 - 2016-09-21
+
+* Update meta-resin to v1.12 [Florin]
 * Update resin-yocto-scripts to include resinhup upload to dockerhub [Florin]
 * Update tests/autohat - Fetching the new resin-cli and adding additional tests [Praneeth]
 * Update meta-resin [Florin]
