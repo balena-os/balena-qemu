@@ -30,6 +30,6 @@ if [ "${MACHINE}" == "qemux86-64" ]; then
 		--env application_name=${MACHINE//-} \
 		--env image=/autohat/resin.img \
 		--privileged \
-		$AUTOHAT_IMAGE robot --exitonerror -d /autohat /autohat/qemux86-64.robot
+		$AUTOHAT_IMAGE robot --exitonfailure --exitonerror -d /autohat /autohat/qemux86-64.robot
 fi
 trap 'cleanup' EXIT
