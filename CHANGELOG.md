@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update tests/start.sh - Enable AutoHaT support for Qemu 32 bit images [Horia]
 * Update tests/autohat - Bring in stability improvements and new tests [Praneeth]
 
 # v1.24.0 - 2016-12-05
