@@ -3,6 +3,24 @@ Change log
 
 * Exit tests on first failed robot test [Praneeth]
 
+# v2.0.0-beta.7 - 2016-12-05
+
+* Update meta-resin to v2.0-beta.7 [Florin]
+
+# v2.0.0-beta.6 - 2016-12-05
+
+* Update meta-resin to v2.0-beta.6 [Andrei]
+
+# v2.0.0-beta.5 - 2016-11-30
+
+* Update meta-resin to v2.0-beta.5 [Andrei]
+
+# v2.0.0-beta.3 - 2016-11-07
+
+* Update meta-resin to v2.0-beta.3 [Andrei]
+* Cleanup docker-resin-supervisor-disk of unneeded variables [Andrei]
+* Update resin-yocto-scripts to fix logging in container builds
+
 # v2.0.0-beta.1 - 2016-10-11
 
 * Update meta-resin to v2.0-beta.1 [Andrei]
