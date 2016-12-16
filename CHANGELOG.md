@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update tests/start.sh - Enable AutoHaT support for Qemu 32 bit images [Horia]
+
 # v2.0.0-beta.7 - 2016-12-05
 
 * Update meta-resin to v2.0-beta.7 [Florin]
