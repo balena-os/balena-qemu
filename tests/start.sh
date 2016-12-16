@@ -21,7 +21,7 @@ cleanup() {
 trap 'cleanup fail' SIGINT SIGTERM
 if [ "${MACHINE}" == "qemux86-64" ]; then
 	echo "==============Running tests==============="
-	docker run --rm -v ${WORKSPACE}/tests/autohat:/autohat --privileged \
+	docker run --rm -t -v ${WORKSPACE}/tests/autohat:/autohat --privileged \
 		-v /dev/:/dev2 \
 		--env RESINRC_RESIN_URL=${RESINRC_RESIN_URL} \
 		--env email=${RESIN_EMAIL} \
@@ -30,6 +30,6 @@ if [ "${MACHINE}" == "qemux86-64" ]; then
 		--env application_name=${MACHINE//-} \
 		--env image=/autohat/resin.img \
 		--privileged \
-		$AUTOHAT_IMAGE robot --exitonerror -d /autohat /autohat/qemux86-64.robot
+		$AUTOHAT_IMAGE robot --exitonerror --exitonfailure -d /autohat /autohat/qemu.robot
 fi
 trap 'cleanup' EXIT
