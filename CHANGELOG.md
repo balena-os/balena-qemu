@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update tests/autohat - Bring in stability improvements and new tests [Praneeth]
+
 # v1.24.0 - 2016-12-05
 
 * Update meta-resin to v1.24 [Florin]
