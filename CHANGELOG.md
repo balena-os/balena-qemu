@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v1.26.0-rc0 - 2017-01-27
+
+* Update meta-resin to v1.26-rc0 [Andrei]
 * Update resin-yocto-scripts to HEAD of the 1.X branch [Florin]
 * Update tests/start.sh - Enable AutoHaT support for Qemu 32 bit images [Horia]
 * Update tests/autohat - Bring in stability improvements and new tests [Praneeth]
