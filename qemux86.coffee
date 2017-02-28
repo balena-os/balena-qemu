@@ -37,9 +37,9 @@ module.exports =
 	yocto:
 		machine: 'qemux86'
 		image: 'resin-image'
-		fstype: 'resin-sdcard'
+		fstype: 'resinos-img'
 		version: 'yocto-jethro'
-		deployArtifact: 'resin-image-qemux86.resin-sdcard'
+		deployArtifact: 'resin-image-qemux86.resinos-img'
 		compressed: true
 
 
