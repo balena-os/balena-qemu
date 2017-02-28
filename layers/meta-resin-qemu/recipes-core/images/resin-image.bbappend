@@ -34,8 +34,8 @@ deploy_image_in_bundle() {
     cp -r ${RESIN_RUNQEMUDIR}/* ${RESIN_BUNDLEDIR}
 
     # Handle GRUB installation
-    dd if=${DEPLOY_DIR_IMAGE}/grub/boot.img of=${RESIN_SDIMG} conv=notrunc bs=446 count=1
-    dd if=${DEPLOY_DIR_IMAGE}/grub/core.img of=${RESIN_SDIMG} conv=notrunc bs=512 seek=1
+    dd if=${DEPLOY_DIR_IMAGE}/grub/boot.img of=${RESIN_RAW_IMG} conv=notrunc bs=446 count=1
+    dd if=${DEPLOY_DIR_IMAGE}/grub/core.img of=${RESIN_RAW_IMG} conv=notrunc bs=512 seek=1
 }
 IMAGE_POSTPROCESS_COMMAND_append_qemux86 = " deploy_image_in_bundle; "
 IMAGE_POSTPROCESS_COMMAND_append_qemux86-64 = " deploy_image_in_bundle; "
