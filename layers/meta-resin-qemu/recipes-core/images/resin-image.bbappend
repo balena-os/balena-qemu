@@ -1,7 +1,7 @@
-IMAGE_FSTYPES_append_qemux86 = " resin-sdcard"
-IMAGE_FSTYPES_append_qemux86-64 = " resin-sdcard"
+IMAGE_FSTYPES_append_qemux86 = " resinos-img"
+IMAGE_FSTYPES_append_qemux86-64 = " resinos-img"
 
-# Customize resin-sdcard
+# Customize resinos-img
 RESIN_IMAGE_BOOTLOADER_qemux86 = "grub"
 RESIN_BOOT_PARTITION_FILES_qemux86 = " \
     ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
@@ -28,7 +28,7 @@ deploy_image_in_bundle() {
     mkdir -p ${RESIN_BUNDLEDIR}
 
     # Deploy image
-    cp -rL ${DEPLOY_DIR_IMAGE}/resin-image-${MACHINE}.resin-sdcard ${RESIN_BUNDLEDIR}/resin-image-${MACHINE}.hddimg
+    cp -rL ${DEPLOY_DIR_IMAGE}/resin-image-${MACHINE}.resinos-img ${RESIN_BUNDLEDIR}/resin-image-${MACHINE}.hddimg
 
     # Deploy runqemu scripts
     cp -r ${RESIN_RUNQEMUDIR}/* ${RESIN_BUNDLEDIR}
