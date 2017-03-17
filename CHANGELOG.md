@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update the meta-resin submodule to version v2.0.0-rc3 [Florin]
+
 # v2.0.0-beta12.rev1 - 2017-02-27
 
 * Bump tests/autohat to current HEAD [Andrei]
