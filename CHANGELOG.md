@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update grub.cfg - Search QEMU root device by label instead of hda/sda/vda paths [Praneeth]
 * Update linux-yocto_%.bbappend - To enable support for running the image on Google Cloud [Praneeth]
 
 # v2.0.0-rc5.rev1 - 2017-03-26
