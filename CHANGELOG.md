@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.0.0-rc5.rev1 - 2017-03-26
+
+* Update the meta-resin submodule to version v2.0.0-rc5 [Florin]
 * Update tests/autohat - Bring in stability improvements and new tests [Praneeth]
 * Increase size of the resin initramfs image from 8192K to 16384K to accommodate for size increase due to x86 arch [Florin]
 * Update the meta-resin submodule to version v2.0.0-rc3 [Florin]
