@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update linux-yocto_%.bbappend - To enable support for running the image on Google Cloud [Praneeth]
+
 # v2.0.0-rc5.rev1 - 2017-03-26
 
 * Update the meta-resin submodule to version v2.0.0-rc5 [Florin]
