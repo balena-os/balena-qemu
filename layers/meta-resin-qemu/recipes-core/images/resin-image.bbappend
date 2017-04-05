@@ -25,7 +25,7 @@ deploy_image_in_bundle() {
     mkdir -p ${RESIN_BUNDLEDIR}
 
     # Deploy image
-    cp -rL ${DEPLOY_DIR_IMAGE}/resin-image-${MACHINE}.resinos-img ${RESIN_BUNDLEDIR}/resin-image-${MACHINE}.hddimg
+    cp -rL ${RESIN_RAW_IMG} ${RESIN_BUNDLEDIR}/resin-image-${MACHINE}.hddimg
 
     # Handle GRUB installation
     dd if=${DEPLOY_DIR_IMAGE}/grub/boot.img of=${RESIN_RAW_IMG} conv=notrunc bs=446 count=1
