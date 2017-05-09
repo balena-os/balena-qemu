@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update resin-yocto-scripts [Will]
 * Update autohat submodule [Will]
 * Update Poky and meta-openembedded submodules to morty [Will]
 * Update tests/autohat - Fixes HOSTOS version parsing bug + Adds new tests [Praneeth]
