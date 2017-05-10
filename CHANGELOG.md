@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.0.2+rev1 - 2017-05-10
+
+* meta-resin: Bump to 2.0.2 [Andrei]
 * Update resin-yocto-scripts [Will]
 * Update autohat submodule [Will]
 * Update Poky and meta-openembedded submodules to morty [Will]
