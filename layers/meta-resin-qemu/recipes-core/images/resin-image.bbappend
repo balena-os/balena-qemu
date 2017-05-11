@@ -33,3 +33,27 @@ deploy_image_in_bundle() {
 }
 IMAGE_POSTPROCESS_COMMAND_append_qemux86 = " deploy_image_in_bundle; "
 IMAGE_POSTPROCESS_COMMAND_append_qemux86-64 = " deploy_image_in_bundle; "
+
+#
+# Build the docker virtual image
+#
+LICENSE = "MIT"
+LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+DEPENDS_remove_docker-x86-64 = "kernel-modules-headers"
+SRC_URI += " \
+    file://Dockerfile.template \
+    file://entry.sh \
+    "
+python () {
+    if d.getVar("MACHINE", True) == 'docker-x86-64':
+        d.delVarFlag('do_fetch', 'noexec')
+        d.delVarFlag('do_unpack', 'noexec')
+        d.delVarFlag('do_configure', 'noexec')
+}
+IMAGE_CMD_dockerimage() {
+     tar -C ${IMAGE_ROOTFS} -c . | docker import - ${MACHINE}_docker_pre
+     sed "s/#{VERSION}/${MACHINE}_docker_pre/g" ${WORKDIR}/Dockerfile.template > ${WORKDIR}/Dockerfile
+     docker build -t ${MACHINE}_docker ${WORKDIR}
+}
+IMAGE_FSTYPES_append_docker-x86-64 = " dockerimage"

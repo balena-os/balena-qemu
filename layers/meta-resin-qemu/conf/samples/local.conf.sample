@@ -1,6 +1,7 @@
 # Supported machines
 #MACHINE ?= "qemux86"
 #MACHINE ?= "qemux86-64"
+#MACHINE ?= "docker-x86-64"
 
 # More info meta-resin/README.md
 #RESIN_CONNECTABLE ?= "1"

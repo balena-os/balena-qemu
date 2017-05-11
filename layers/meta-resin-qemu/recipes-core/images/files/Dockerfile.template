@@ -1,0 +1,45 @@
+FROM #{VERSION}
+
+# We never want these to run in a container
+RUN systemctl mask \
+    dev-hugepages.mount \
+    sys-fs-fuse-connections.mount \
+    sys-kernel-config.mount \
+
+    display-manager.service \
+    getty@.service \
+    systemd-logind.service \
+    systemd-remount-fs.service \
+
+    getty.target \
+    graphical.target
+
+VOLUME /mnt/state
+VOLUME /mnt/data
+VOLUME /mnt/data/docker
+VOLUME /mnt/boot
+VOLUME /var/lib/docker
+
+RUN rm /lib/systemd/system/systemd-ask-password-plymouth.service \
+	/lib/systemd/system/plymouth-*.service
+
+RUN cd /lib/systemd/system && \
+	find . -type f -exec  sed -i 's|mnt-state.mount ||g' {} \;  && \
+	find . -type f -exec  sed -i 's|mnt-data.mount ||g' {} \;  && \
+	find . -type f -exec  sed -i 's|mnt-boot.mount ||g' {} \;  && \
+	find . -type f -exec  sed -i 's|mnt-state.mount||g' {} \;  && \
+	find . -type f -exec  sed -i 's|mnt-data.mount||g' {} \;  && \
+	find . -type f -exec  sed -i 's|mnt-boot.mount||g' {} \;  && \
+	rm /lib/systemd/system/mnt-data.mount && \
+	rm /lib/systemd/system/mnt-state.mount && \
+	rm /lib/systemd/system/mnt-boot.mount && \
+	#sed -i 's|aufs|vfs|g' /etc/systemd/system/docker.service.d/docker.conf && \
+	addgroup -S dockremap \
+	&& adduser -S -G dockremap dockremap \
+	&& echo 'dockremap:165536:65536' >> /etc/subuid \
+	&& echo 'dockremap:165536:65536' >> /etc/subgid
+
+STOPSIGNAL 37
+
+COPY entry.sh /usr/bin/entry.sh    
+ENTRYPOINT ["/usr/bin/entry.sh"]
