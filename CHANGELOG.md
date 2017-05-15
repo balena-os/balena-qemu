@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Adding new autohat tests + fixes [Horia]
+
 # v2.0.2+rev1 - 2017-05-10
 
 * meta-resin: Bump to 2.0.2 [Andrei]
