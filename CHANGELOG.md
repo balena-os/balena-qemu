@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update resin-yocto-scripts to master [Will]
 * Adding new autohat tests + fixes [Horia]
 
 # v2.0.2+rev1 - 2017-05-10
