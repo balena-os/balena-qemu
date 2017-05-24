@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update tests/start.sh - Adding new tests + fixes [Horia]
 * Update resin-yocto-scripts to master [Will]
 * Update tests/autohat to master [Will]
 
