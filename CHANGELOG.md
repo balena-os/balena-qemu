@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Make Yocto use libsdl-native instead of host libsdl [Florin]
+
 # v2.0.4+rev1 - 2017-05-22
 
 * Update the meta-resin submodule to version v2.0.4 [Florin]
