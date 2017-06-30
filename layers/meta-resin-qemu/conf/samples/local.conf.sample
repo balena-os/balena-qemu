@@ -61,6 +61,5 @@ BB_DISKMON_DIRS = "\
 # libsdl library available on your build system.
 PACKAGECONFIG_append_pn-qemu-native = " sdl"
 PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
-ASSUME_PROVIDED += "libsdl-native"
 
 CONF_VERSION = "1"
