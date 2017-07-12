@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update Poky and meta-openembedded submodules to morty [Florin]
 * Update tests/start.sh - Adding new tests + fixes [Horia]
 * Update resin-yocto-scripts to master [Will]
 * Update tests/autohat to master [Will]
