@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Make Yocto use libsdl-native instead of host libsdl [Florin]
 * Update tests/start.sh - Adding new tests + fixes [Horia]
 * Update resin-yocto-scripts to master [Will]
 * Update tests/autohat to master [Will]
