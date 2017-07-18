@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v1.27.0 - 2017-07-18
+
+* Update meta-resin to v1.27 [Florin]
 * Update resin-yocto-scripts submodule to HEAD of 1.X [Florin]
 * Make Yocto use libsdl-native instead of host libsdl [Florin]
 * Update autohat submodule to HEAD of master [Florin]
