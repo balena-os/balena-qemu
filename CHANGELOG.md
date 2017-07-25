@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.1.0+rev1 - 2017-07-25
+
+* Update the meta-resin submodule to version v2.1.0 [Florin]
+* Update the resin-yocto-scripts submodule to HEAD of master [Florin]
 * Make Yocto use libsdl-native instead of host libsdl [Florin]
 
 # v2.0.4+rev1 - 2017-05-22
