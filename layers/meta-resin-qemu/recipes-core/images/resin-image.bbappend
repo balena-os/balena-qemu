@@ -28,7 +28,7 @@ deploy_image_in_bundle() {
     mkdir -p ${RESIN_BUNDLEDIR}
 
     # Deploy image
-    cp -rL ${DEPLOY_DIR_IMAGE}/resin-image-${MACHINE}.resin-sdcard ${RESIN_BUNDLEDIR}/resin-image-${MACHINE}.hddimg
+    cp -rL ${IMGDEPLOYDIR}/resin-image-${MACHINE}.resin-sdcard ${RESIN_BUNDLEDIR}/resin-image-${MACHINE}.hddimg
 
     # Deploy runqemu scripts
     cp -r ${RESIN_RUNQEMUDIR}/* ${RESIN_BUNDLEDIR}
