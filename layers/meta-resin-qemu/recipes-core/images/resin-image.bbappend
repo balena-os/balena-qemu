@@ -19,19 +19,13 @@ RESIN_BOOT_PARTITION_FILES_qemux86-64 = " \
 #
 # Deploy a bundle of files for qemu machines
 #
-EXTRA_IMAGEDEPENDS_append_qemux86 = " resin-runqemu"
-EXTRA_IMAGEDEPENDS_append_qemux86-64 = " resin-runqemu"
-RESIN_RUNQEMUDIR = "${DEPLOY_DIR_IMAGE}/resin-runqemu"
 RESIN_BUNDLEDIR = "${DEPLOY_DIR_IMAGE}/resin-${MACHINE}"
 deploy_image_in_bundle() {
     rm -rf ${RESIN_BUNDLEDIR}
     mkdir -p ${RESIN_BUNDLEDIR}
 
     # Deploy image
-    cp -rL ${DEPLOY_DIR_IMAGE}/resin-image-${MACHINE}.resin-sdcard ${RESIN_BUNDLEDIR}/resin-image-${MACHINE}.hddimg
-
-    # Deploy runqemu scripts
-    cp -r ${RESIN_RUNQEMUDIR}/* ${RESIN_BUNDLEDIR}
+    cp -rL ${IMGDEPLOYDIR}/resin-image-${MACHINE}.resin-sdcard ${RESIN_BUNDLEDIR}/resin-image-${MACHINE}.hddimg
 
     # Handle GRUB installation
     dd if=${DEPLOY_DIR_IMAGE}/grub/boot.img of=${RESIN_SDIMG} conv=notrunc bs=446 count=1

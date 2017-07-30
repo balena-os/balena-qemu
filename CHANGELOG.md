@@ -1,6 +1,13 @@
 Change log
 -----------
 
+# v1.29.0 - 2017-07-28
+
+* Update meta-resin to v1.29 [Florin]
+* Update resin-yocto-scripts submodule to HEAD of 1.X [Florin]
+* Make Yocto use libsdl-native instead of host libsdl [Florin]
+* Update autohat submodule to HEAD of master [Florin]
+* Update Poky and meta-openembedded submodules to morty [Florin]
 * Update tests/start.sh - Adding new tests + fixes [Horia]
 * Update resin-yocto-scripts to master [Will]
 * Update tests/autohat to master [Will]
