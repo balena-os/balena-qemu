@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update to Yocto Pyro [Will]
 * Update resin-yocto-scripts to latest master [Will]
 
 # v2.3.0+rev1 - 2017-08-17
