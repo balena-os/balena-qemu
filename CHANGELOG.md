@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Add meta-rust layer [Will]
+
 * Update to Yocto Pyro [Will]
 * Update resin-yocto-scripts to latest master [Will]
 
