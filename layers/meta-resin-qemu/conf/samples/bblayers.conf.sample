@@ -15,6 +15,7 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
     ${TOPDIR}/../layers/meta-resin/meta-resin-pyro \
     ${TOPDIR}/../layers/meta-resin-qemu \
+    ${TOPDIR}/../layers/meta-rust \
     "
 
 BBLAYERS_NON_REMOVABLE ?= " \
