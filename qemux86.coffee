@@ -10,7 +10,7 @@ QEMU_RUNNING_INSTRUCTIONS = '''
 	<br>
 	On systems without KVM support:
 	<br>
-	<code>qemu-system-i386 -drive file=resin-image-qemux86.img,media=disk,cache=none,format=raw -net nic,model=virtio -net user -m 512 -nographic -machine type=pc -smp 4 -cpu host</code>
+	<code>qemu-system-i386 -drive file=resin-image-qemux86.img,media=disk,cache=none,format=raw -net nic,model=virtio -net user -m 512 -nographic -machine type=pc -smp 4</code>
 	<br>
 	Tweak <code>-smp</code> and <code>-cpu</code> parameters based on the CPU of the machine qemu is running on. <code>-cpu</code> parameter needs to be dropped on OSX and Windows.
 	<br>
