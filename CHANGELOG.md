@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Switch to Yocto Sumo 19.0.0 [Florin]
+
 # v2.13.6+rev1
 ## (2018-07-13)
 
