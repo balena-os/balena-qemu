@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.14.0+rev1
+## (2018-07-20)
+
+* Update the meta-resin submodule to version v2.14.0 [Florin]
 * Switch docker storage driver from aufs to overlayfs [Florin]
 * Switch to Yocto Sumo 19.0.0 [Florin]
 
