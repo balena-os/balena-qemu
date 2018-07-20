@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Switch docker storage driver from aufs to overlayfs [Florin]
 * Switch to Yocto Sumo 19.0.0 [Florin]
 
 # v2.13.6+rev1
