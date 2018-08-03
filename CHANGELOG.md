@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update the resin-yocto-scripts submodule to 8312741e13604a9d166370349061876afb22c0fa (on master branch) [Florin]
 * Enable squashfs support in the kernel [Florin]
 
 # v2.14.0+rev1
