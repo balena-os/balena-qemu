@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.14.1+rev1
+## (2018-08-03)
+
+* Update the meta-resin submodule to version v2.14.1 [Florin]
 * Update the resin-yocto-scripts submodule to 8312741e13604a9d166370349061876afb22c0fa (on master branch) [Florin]
 * Enable squashfs support in the kernel [Florin]
 
