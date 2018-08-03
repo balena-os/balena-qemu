@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Enable squashfs support in the kernel [Florin]
+
 # v2.14.0+rev1
 ## (2018-07-20)
 
