@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update autohat to HEAD of master [Horia]
+
 # v2.14.1+rev2
 ## (2018-08-05)
 
