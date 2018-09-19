@@ -1,0 +1,259 @@
+- version: v2.15.1+rev1
+  date: 2018-08-30T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.15.1 [Florin Sarbu]'
+    - subject: 'Add versionist support [Giovanni Garufi]'
+- version: v2.14.3+rev1
+  date: 2018-08-14T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.14.3 [Florin]'
+    - subject: 'Update autohat to HEAD of master [Horia]'
+- version: v2.14.1+rev2
+  date: 2018-08-04T22:00:00.000Z
+  commits:
+    - subject: 'Disable UPX compression for os-config [Florin]'
+- version: v2.14.1+rev1
+  date: 2018-08-02T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.14.1 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        8312741e13604a9d166370349061876afb22c0fa (on master branch) [Florin]
+    - subject: 'Enable squashfs support in the kernel [Florin]'
+- version: v2.14.0+rev1
+  date: 2018-07-19T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.14.0 [Florin]'
+    - subject: 'Switch docker storage driver from aufs to overlayfs [Florin]'
+    - subject: 'Switch to Yocto Sumo 19.0.0 [Florin]'
+- version: v2.13.6+rev1
+  date: 2018-07-12T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.13.6 [Florin]'
+- version: v2.13.5+rev1
+  date: 2018-07-09T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.13.5 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        59ccd8558435ff6424827fb36ccb43b14650f4d4 (on master branch) [Florin]
+- version: v2.12.7+rev1
+  date: 2018-05-06T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.7 [Florin]'
+- version: v2.12.6+rev1
+  date: 2018-05-01T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.6 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        f7718efbbf53369aaacb7eb54e707ee8a5d4fc4b (on master branch) [Florin]
+- version: v2.12.5+rev1
+  date: 2018-03-26T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.5 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        9cecb1ca4d9d4713dd337148b7d04a17afdba772 (on master branch) [Florin]
+    - subject: 'Update running instructions for non-KVM case [Gergely]'
+- version: v2.9.6+rev1
+  date: 2018-01-12T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.9.6 [Florin]'
+- version: v2.9.2+rev1
+  date: 2017-12-20T00:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.9.2 [Florin]'
+    - subject: >-
+        Install in the rootfs the 99-resin-grub hostapp hook needed for GRUB to
+        switch the root partition when doing host OS updates [Florin]
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        6f7a9ab326bb822196e3e48b08ef1d73d08caec6 (on master branch) [Florin]
+- version: v2.7.4+rev1
+  date: 2017-10-28T00:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.7.4 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        e3a06d48a2f8b7e32d3047c33066a5b896e6ae93 (on master branch) [Florin]
+    - subject: 'Update meta-openembedded to latest pyro branch [Will]'
+    - subject: 'Update poky to latest pyro branch [Will]'
+    - subject: 'Include meta-rust layer [Will]'
+    - subject: 'Add meta-rust layer [Will]'
+    - subject: 'Update to Yocto Pyro [Will]'
+    - subject: 'Update resin-yocto-scripts to latest master [Will]'
+- version: v2.3.0+rev1
+  date: 2017-08-16T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.3.0 [Florin]'
+- version: v2.2.0+rev1
+  date: 2017-07-29T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.2.0 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule to HEAD of master [Florin]'
+- version: v2.1.0+rev1
+  date: 2017-07-24T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.1.0 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule to HEAD of master [Florin]'
+    - subject: 'Make Yocto use libsdl-native instead of host libsdl [Florin]'
+- version: v2.0.4+rev1
+  date: 2017-05-21T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.0.4 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule [Florin]'
+    - subject: 'Update resin-yocto-scripts to master [Will]'
+    - subject: 'Adding new autohat tests + fixes [Horia]'
+- version: v2.0.2+rev1
+  date: 2017-05-09T22:00:00.000Z
+  commits:
+    - subject: 'meta-resin: Bump to 2.0.2 [Andrei]'
+    - subject: 'Update resin-yocto-scripts [Will]'
+    - subject: 'Update autohat submodule [Will]'
+    - subject: 'Update Poky and meta-openembedded submodules to morty [Will]'
+    - subject: >-
+        Update tests/autohat - Fixes HOSTOS version parsing bug + Adds new tests
+        [Praneeth]
+    - subject: >-
+        Update grub.cfg - Search QEMU root device by label instead of
+        hda/sda/vda paths [Praneeth]
+    - subject: >-
+        Update linux-yocto_%.bbappend - To enable support for running the image
+        on Google Cloud [Praneeth]
+- version: v2.0.0-rc5.rev1
+  date: 2017-03-25T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.0.0-rc5 [Florin]'
+    - subject: >-
+        Update tests/autohat - Bring in stability improvements and new tests
+        [Praneeth]
+    - subject: >-
+        Increase size of the resin initramfs image from 8192K to 16384K to
+        accommodate for size increase due to x86 arch [Florin]
+    - subject: 'Update the meta-resin submodule to version v2.0.0-rc3 [Florin]'
+- version: v2.0.0-beta12.rev1
+  date: 2017-02-26T23:00:00.000Z
+  commits:
+    - subject: 'Bump tests/autohat to current HEAD [Andrei]'
+    - subject: 'Bump resin-yocto-scripts to current HEAD [Andrei]'
+    - subject: 'meta-resin: Bump to 2.0.0-beta12 [Andrei]'
+- version: v2.0.0-beta11.rev1
+  date: 2017-02-14T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0.0-beta.11 [Andrei]'
+- version: v2.0.0-beta10.rev1
+  date: 2017-02-13T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0.0-beta.10 [Andrei]'
+- version: v2.0.0-beta.9
+  date: 2017-02-07T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.9 [Andrei]'
+- version: v2.0.0-beta.8
+  date: 2017-01-26T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.8 [Andrei]'
+    - subject: 'Update resin-yocto-scripts to HEAD of the master branch [Florin]'
+    - subject: >-
+        Update tests/start.sh - Enable AutoHaT support for Qemu 32 bit images
+        [Horia]
+    - subject: >-
+        Update tests/autohat - Bring in stability improvements and new tests
+        [Praneeth]
+- version: v2.0.0-beta.7
+  date: 2016-12-04T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.7 [Florin]'
+- version: v2.0.0-beta.6
+  date: 2016-12-04T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.6 [Andrei]'
+- version: v2.0.0-beta.5
+  date: 2016-11-30T00:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.5 [Andrei]'
+- version: v2.0.0-beta.3
+  date: 2016-11-06T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.3 [Andrei]'
+    - subject: 'Cleanup docker-resin-supervisor-disk of unneeded variables [Andrei]'
+    - subject: Update resin-yocto-scripts to fix logging in container builds
+- version: v2.0.0-beta.1
+  date: 2016-10-11T00:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.1 [Andrei]'
+    - subject: 'Add meta-filesystem as we need aufs-utils [Andrei]'
+    - subject: 'Add build support for resinos [Andrei]'
+    - subject: >-
+        Update resin-yocto-script to include changes in our image types
+        [Theodor]
+    - subject: 'Replace the concept of a debug image with a development image [Theodor]'
+    - subject: 'Update meta-resin to include avahi [Florin]'
+    - subject: >-
+        Update resin-yocto-scripts to include kernel headers handling as gzip
+        [Florin]
+- version: v1.16.0
+  date: 2016-09-26T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.16 [Florin]'
+- version: v1.15.0
+  date: 2016-09-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.15 [Florin]'
+- version: v1.14.0
+  date: 2016-09-22T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.14 [Florin]'
+- version: v1.13.0
+  date: 2016-09-22T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.13 [Florin]'
+- version: v1.12.0
+  date: 2016-09-20T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.12 [Florin]'
+    - subject: >-
+        Update resin-yocto-scripts to include resinhup upload to dockerhub
+        [Florin]
+    - subject: >-
+        Update tests/autohat - Fetching the new resin-cli and adding additional
+        tests [Praneeth]
+    - subject: 'Update meta-resin [Florin]'
+    - subject: >-
+        Change .coffee to announce partition 1 now holds config.json and also
+        introduce versioning (v1) [Florin]
+- version: v1.11.0
+  date: 2016-08-30T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.11 [Florin]'
+- version: v1.10.0
+  date: 2016-08-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.10 [Florin]'
+- version: v1.9.0
+  date: 2016-08-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.9 [Florin]'
+    - subject: >-
+        Update resin-yocto-scripts for including kernel modules headers deploy
+        [Florin]
+- version: v1.8.0
+  date: 2016-08-01T22:00:00.000Z
+  commits:
+    - subject: 'Bump meta-resin to v1.8 [Andrei]'
+- version: v1.7.2
+  date: 2016-07-25T22:00:00.000Z
+  commits:
+    - subject: >-
+        Bump resin-yocto-scripts to current HEAD to include ability to run tests
+        based on variable [Praneeth]
+- version: v1.7.1
+  date: 2016-07-25T22:00:00.000Z
+  commits:
+    - subject: No more debug images in staging
+- version: v1.7.0
+  date: 2016-07-13T22:00:00.000Z
+  commits:
+    - subject: Update meta-resin to v1.7
+    - subject: 'Add support for qemux86 and qemux86-64 [Andrei]'
