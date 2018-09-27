@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update autohat v0.0.3
+      hash: 52fe659afd825a867dac1f9cd18fbee8e4661e68
+      body: ''
+      footer:
+        Changelog-entry: Update autohat v0.0.3
+        changelog-entry: Update autohat v0.0.3
+        Signed-off-by: Horia Delicoti <horia.delicoti@gmail.com>
+        signed-off-by: Horia Delicoti <horia.delicoti@gmail.com>
+      author: Horia Delicoti
+  version: 2.19.0+rev2
+  date: 2018-09-27T12:42:33.155Z
+- commits:
     - subject: Update the meta-resin submodule to v2.19.0
       hash: fafb4e9d1d4b484954c17fe732f49242b88885d4
       body: |

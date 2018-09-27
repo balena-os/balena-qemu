@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.19.0+rev2
+## (2018-09-27)
+
+* Update autohat v0.0.3 [Horia Delicoti]
+
 # v2.19.0+rev1
 ## (2018-09-25)
 
