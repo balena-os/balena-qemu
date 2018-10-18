@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.19.0+rev3
+## (2018-10-18)
+
+* Update autohat v0.0.5 [Andrei Gherzan]
+
 # v2.19.0+rev2
 ## (2018-09-27)
 

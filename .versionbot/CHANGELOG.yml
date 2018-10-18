@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update autohat v0.0.5
+      hash: 80d3bf8ae178d97486bea90f5eb787e118db3c53
+      body: ''
+      footer:
+        Changelog-entry: Update autohat v0.0.5
+        changelog-entry: Update autohat v0.0.5
+        Signed-off-by: Andrei Gherzan <andrei@balena.io>
+        signed-off-by: Andrei Gherzan <andrei@balena.io>
+      author: Andrei Gherzan
+  version: 2.19.0+rev3
+  date: 2018-10-18T15:45:41.914Z
+- commits:
     - subject: Update autohat v0.0.3
       hash: 52fe659afd825a867dac1f9cd18fbee8e4661e68
       body: ''
