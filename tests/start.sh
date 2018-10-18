@@ -23,6 +23,7 @@ echo "==============Running tests==============="
 docker run --rm -t -v ${WORKSPACE}/tests/autohat:/autohat --privileged \
     -v /dev/:/dev2 \
     --env RESINRC_RESIN_URL=${RESINRC_RESIN_URL} \
+    --env RESINRC_PROXY_URL=${RESINRC_PROXY_URL} \
     --env email=${RESIN_EMAIL} \
     --env password=${RESIN_PASSWORD} \
     --env device_type=${MACHINE} \
