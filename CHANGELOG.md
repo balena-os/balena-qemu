@@ -1,6 +1,63 @@
 Change log
 -----------
 
+# v2.25.0+rev1
+## (2018-11-05)
+
+* Update the meta-resin submodule from v2.21.0 to v2.25.0 [Florin Sarbu]
+
+<details>
+<summary> View details </summary>
+
+## meta-resin-2.25.0
+### (2018-11-02)
+
+* Generate ssh host key at first boot (not at first connection) [Andrei Gherzan]
+* Fix extraneous space in kernel-resin.bbclass config [Florin Sarbu]
+* Drop obsolete eval from kernel-resin's do_kernel_resin_reconfigure [Florin Sarbu]
+* Add SyslogIdentifier for balena and resin-supervisor healthdog services [Matthew McGinn]
+
+## meta-resin-2.24.1
+### (2018-11-01)
+
+* Update resin-supervisor to v8.0.0 [Pablo Carranza Velez]
+
+## meta-resin-2.24.0
+### (2018-10-24)
+
+* resin-info: Small tweak for balenaCloud product [Andrei Gherzan]
+* Update resin-supervisor to v7.25.8 [Pablo Carranza Velez]
+* Rename resinOS to balenaOS [Andrei Gherzan]
+
+## meta-resin-2.23.0
+### (2018-10-22)
+
+* Update resin-supervisor to v7.25.5 [Cameron Diver]
+* recipes-containers: Increase healthcheck timeout to 180s [Gergely Imreh]
+* .gitignore: add node_modules and package-lock files [Giovanni Garufi]
+
+## meta-resin-2.22.1
+### (2018-10-20)
+
+* Update resin-supervisor to v7.25.3 [Pablo Carranza Velez]
+
+## meta-resin-2.22.0
+### (2018-10-19)
+
+* Update resin-supervisor to v7.25.2 [Andrei Gherzan]
+* Include a CONTRIBUTING.md file [Andrei Gherzan]
+* Update to ModemManager v1.8.2 [Andrei Gherzan]
+* Updates on contributing-device-support.md [Vicentiu Galanopulo]
+
+## meta-resin-2.21.0
+### (2018-10-18)
+
+* Improve systemd service ordering in rollbacks [Zubair Lutfullah Kakakhel]
+* Update resin-supervisor to v7.24.1 [Andrei Gherzan]
+</details>
+
+* Update autohat v0.0.5 [Andrei Gherzan]
+
 # v2.21.0+rev1
 ## (2018-10-18)
 
