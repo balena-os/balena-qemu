@@ -1,3 +1,18 @@
+- commits:
+    - subject: Bump autohat to v0.0.9
+      hash: 6619e646c49fcd1b42eef774415fef0ba690e2de
+      body: |
+        Changes the Dockerfile base image from jessie to stretch
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Bump autohat to v0.0.9
+        changelog-entry: Bump autohat to v0.0.9
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.29.2+rev3
+  date: 2019-03-29T09:37:58.377Z
 - commits: []
   version: 2.29.2+rev2
   date: 2019-02-26T18:58:44.534Z

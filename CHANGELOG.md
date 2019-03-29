@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.29.2+rev3
+## (2019-03-29)
+
+* Bump autohat to v0.0.9 [Zubair Lutfullah Kakakhel]
+
 # v2.29.2+rev2
 ## (2019-02-26)
 
