@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update autohat submodule to v0.0.10
+      hash: 0a7b8e247313ae62701a3d71e75e8971498714d7
+      body: ''
+      footer:
+        Changelog-entry: Update autohat submodule to v0.0.10
+        changelog-entry: Update autohat submodule to v0.0.10
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Horia Delicoti <horia@balena.io>
+        signed-off-by: Horia Delicoti <horia@balena.io>
+      author: Horia Delicoti
+  version: 2.32.0+rev2
+  date: 2019-04-24T15:01:18.815Z
+- commits:
     - subject: Update meta-balena from v2.31.5 to v2.32.0
       hash: 808584d0f000e323f7afdf24051c72fc2716d2ec
       body: |
