@@ -1,4 +1,17 @@
 - commits:
+    - subject: Disable console on production images.
+      hash: 609b80029cb7d87da4a7b11365da338df0ebe109
+      body: |
+        While keeping console on debug images.
+      footer:
+        Changelog-entry: Disable console on production images.
+        changelog-entry: Disable console on production images.
+        Signed-off-by: Gergely Imreh <gergely@balena.io>
+        signed-off-by: Gergely Imreh <gergely@balena.io>
+      author: Gergely Imreh
+  version: 2.32.0+rev3
+  date: 2019-04-24T22:29:18.242Z
+- commits:
     - subject: Update autohat submodule to v0.0.10
       hash: 0a7b8e247313ae62701a3d71e75e8971498714d7
       body: ''

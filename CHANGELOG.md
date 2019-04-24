@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.32.0+rev3
+## (2019-04-24)
+
+* Disable console on production images. [Gergely Imreh]
+
 # v2.32.0+rev2
 ## (2019-04-24)
 
