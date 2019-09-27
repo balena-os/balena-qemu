@@ -1,4 +1,16 @@
 - commits:
+    - subject: Bump autohat to v0.0.12
+      hash: e92fcec6f5abe6a4fe918a752f3e4cfd4412ad4f
+      body: ''
+      footer:
+        Changelog-entry: Bump autohat to v0.0.12
+        changelog-entry: Bump autohat to v0.0.12
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.38.0+rev3
+  date: 2019-09-27T10:23:22.703Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.3.7
       hash: 898eb8a484e707592a6e49829cebde585b7ea21d
       body: ''
