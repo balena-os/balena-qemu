@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.44.0+rev2
+## (2020-01-15)
+
+* Change the state to 'released' in the coffee files [Vicentiu Galanopulo]
+* Update balena-yocto-scripts to v1.5.2 [Florin Sarbu]
+
 # v2.44.0+rev1
 ## (2019-10-18)
 
