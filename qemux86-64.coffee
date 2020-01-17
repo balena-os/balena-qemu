@@ -23,7 +23,7 @@ module.exports =
 	slug: 'qemux86-64'
 	name: 'QEMU X86 64bit'
 	arch: 'amd64'
-	state: 'experimental'
+	state: 'released'
 
 	instructions: [
 		QEMU_RUNNING_INSTRUCTIONS
