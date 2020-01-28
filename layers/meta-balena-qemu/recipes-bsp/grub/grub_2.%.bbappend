@@ -1,7 +1,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-DEPENDS_class-target = "grub-native"
-RDEPENDS_${PN}_class-target = "diffutils freetype"
+DEPENDS_append_class-target = " grub-native"
+RDEPENDS_${PN}_append_class-target = " diffutils freetype"
 RDEPENDS_${PN}_class-native = ""
 
 SRC_URI_append_class-target = " \
