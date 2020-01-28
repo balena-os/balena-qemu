@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update the poky submodule to warrior-21.0.2
+      hash: 4015babe6878b7a3d51129ac29d9f8efd67c1368
+      body: ''
+      footer:
+        Changelog-entry: Update the poky submodule to warrior-21.0.2
+        changelog-entry: Update the poky submodule to warrior-21.0.2
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.44.0+rev3
+  date: 2020-01-28T14:06:22.797Z
+- commits:
     - subject: Change the state to 'released' in the coffee files
       hash: ffa58701e6806252cf4ed4bc59a2bbbacdd264e5
       body: |

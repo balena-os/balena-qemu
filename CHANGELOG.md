@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.44.0+rev3
+## (2020-01-28)
+
+* Update the poky submodule to warrior-21.0.2 [Zubair Lutfullah Kakakhel]
+
 # v2.44.0+rev2
 ## (2020-01-15)
 
