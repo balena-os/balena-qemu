@@ -38,7 +38,7 @@ module.exports =
 		machine: 'qemux86-64'
 		image: 'resin-image'
 		fstype: 'resinos-img'
-		version: 'yocto-sumo'
+		version: 'yocto-warrior'
 		deployArtifact: 'resin-image-qemux86-64.resinos-img'
 		compressed: true
 
