@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update meta-rust to include 1.36
+      hash: 758dbb771ba494f6811075866ad3a263e1ef72fd
+      body: ''
+      footer:
+        Changelog-entry: Update meta-rust to include 1.36
+        changelog-entry: Update meta-rust to include 1.36
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.44.0+rev4
+  date: 2020-02-11T15:17:55.503Z
+- commits:
     - subject: Update the poky submodule to warrior-21.0.2
       hash: 4015babe6878b7a3d51129ac29d9f8efd67c1368
       body: ''
