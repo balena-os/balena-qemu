@@ -24,6 +24,7 @@ module.exports =
 	name: 'QEMU X86 32bit'
 	arch: 'i386'
 	state: 'released'
+	private: false
 
 	instructions: [
 		QEMU_RUNNING_INSTRUCTIONS
