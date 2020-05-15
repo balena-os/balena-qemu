@@ -27,7 +27,7 @@ docker run --rm -t -v ${WORKSPACE}/tests/autohat:/autohat --privileged \
     --env email=${RESIN_EMAIL} \
     --env password=${RESIN_PASSWORD} \
     --env device_type=${MACHINE} \
-    --env application_name=${MACHINE//-} \
+    --env application_name=${MACHINE//-}-test-app \
     --env image=/autohat/resin.img \
     --privileged \
     $AUTOHAT_IMAGE robot --exitonerror --exitonfailure -d /autohat /autohat/qemu.robot
