@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev3
+## (2020-05-18)
+
+* Fix automated balenaOS test run on QEMU [Roman Mazur]
+
 # v2.48.0+rev2
 ## (2020-05-12)
 

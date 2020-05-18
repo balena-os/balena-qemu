@@ -1,4 +1,30 @@
 - commits:
+    - subject: Fix automated balenaOS test run on QEMU
+      hash: e9624f19c5e95147e5bc6ac7a4b9f089a8229d61
+      body: >
+        A workaround for a problem with creating an application with CLI.
+
+        qemu86 app seems to be registered as a ppublic one, and older CLI
+        versions
+
+        fail to create app with such a name even though app name has to be
+        unique
+
+        in the scope of the user only. So the workaround is to change the app
+        name
+
+        because we cannot update CLI version atm.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Fix automated balenaOS test run on QEMU
+        changelog-entry: Fix automated balenaOS test run on QEMU
+        Signed-off-by: Roman Mazur <roman@balena.io>
+        signed-off-by: Roman Mazur <roman@balena.io>
+      author: Roman Mazur
+  version: 2.48.0+rev3
+  date: 2020-05-18T11:03:00.928Z
+- commits:
     - subject: Set private to false in .coffee files for the public device types
       hash: 3ec1a7099d5c089742b8a36136c2a59e44614afc
       body: ''
