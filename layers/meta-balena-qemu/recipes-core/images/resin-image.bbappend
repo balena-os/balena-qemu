@@ -33,3 +33,8 @@ deploy_image_in_bundle() {
 }
 IMAGE_POSTPROCESS_COMMAND_append_qemux86 = " deploy_image_in_bundle; "
 IMAGE_POSTPROCESS_COMMAND_append_qemux86-64 = " deploy_image_in_bundle; "
+
+# Bootloader is GRUB
+python () {
+        d.delVar("UBOOT_MACHINE")
+}
