@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'resin-image: Don''t define UBOOT_MACHINE'
+      hash: 438ba9f76ecc35b27b3d5c5f96576d465c09ec56
+      body: |
+        Grub is used for the qemu device type,
+        there's no reason to keep uboot_machine.
+      footer:
+        Changelog-entry: 'resin-image: Don''t define UBOOT_MACHINE'
+        changelog-entry: 'resin-image: Don''t define UBOOT_MACHINE'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.50.1+rev2
+  date: 2020-06-25T11:24:50.950Z
+- commits:
     - subject: Bump autohat to v0.0.12
       hash: 132c5d8bfeeffc672827f352799ec8d917cab1f2
       body: ''

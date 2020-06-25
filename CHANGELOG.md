@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.50.1+rev2
+## (2020-06-25)
+
+* resin-image: Don't define UBOOT_MACHINE [Alexandru Costache]
+
 # v2.50.1+rev1
 ## (2020-05-28)
 
