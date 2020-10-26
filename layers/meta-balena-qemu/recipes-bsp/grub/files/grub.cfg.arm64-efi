@@ -1,0 +1,7 @@
+default=resin
+timeout=1
+
+menuentry 'resin'{
+    insmod part_gpt
+    linux /Image root=LABEL=resin-rootA rootwait console=tty0 console=ttyS0,115200n8
+}

@@ -7,10 +7,28 @@ RESIN_CONFIGS[gcp] = " \
     CONFIG_VIRTIO_PCI=y \
     CONFIG_SCSI_VIRTIO=y \
     CONFIG_VIRTIO_NET=y \
+    CONFIG_VIRTIO_BLK=y \
+    CONFIG_VIRTIO_BLK_SCSI=y \
+    CONFIG_SCSI=y \
     CONFIG_PCI_MSI=y \
     "
 
 RESIN_CONFIGS_append = " squashfs"
+
+RESIN_CONFIGS_append_qemuarm64 = " ec2"
+
+RESIN_CONFIGS[ec2] = " \
+    CONFIG_BLK_DEV_NVME=y \
+    "
+
+RESIN_CONFIGS_append_qemuarm64 = " arm64-efi"
+
+RESIN_CONFIGS[arm64-efi] = " \
+    CONFIG_EFI=y \
+    CONFIG_EFI_ARMSTUB_DTB_LOADER=y \
+    CONFIG_EFIVAR_FS=y \
+    CONFIG_ACPI=y \
+    "
 
 RESIN_CONFIGS[squashfs] = " \
     CONFIG_SQUASHFS=m \

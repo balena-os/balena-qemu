@@ -7,6 +7,7 @@ RDEPENDS_${PN}_class-native = ""
 SRC_URI_append_class-target = " \
     file://cfg \
     file://grub.cfg \
+    file://grub.cfg.arm64-efi \
     "
 
 GRUB_IMAGE = "core.img"
@@ -32,6 +33,11 @@ do_deploy() {
     # Deploy grub modules (used in stage 2 bootloader)
     mkdir -p ${DEPLOYDIR}/grub/${GRUB_TARGET}
     cp -r ${D}/${libdir}/grub/${GRUB_TARGET}/*.mod ${DEPLOYDIR}/grub/${GRUB_TARGET}
+}
+
+do_deploy_qemuarm64 () {
+    # Deploy grub config
+    install -m 644 ${WORKDIR}/grub.cfg.arm64-efi ${DEPLOYDIR}/grub.cfg
 }
 
 do_deploy_class-native() {

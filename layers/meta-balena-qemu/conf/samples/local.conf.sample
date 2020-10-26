@@ -1,4 +1,5 @@
 # Supported machines
+#MACHINE ?= "qemuarm64"
 #MACHINE ?= "qemux86"
 #MACHINE ?= "qemux86-64"
 

@@ -1,7 +1,16 @@
+IMAGE_FSTYPES_append_qemuarm64 = " resinos-img"
 IMAGE_FSTYPES_append_qemux86 = " resinos-img"
 IMAGE_FSTYPES_append_qemux86-64 = " resinos-img"
 
 # Customize resinos-img
+RESIN_IMAGE_BOOTLOADER_qemuarm64 = "grub-efi"
+RESIN_BOOT_PARTITION_FILES_qemuarm64 = " \
+    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
+    grub/arm64-efi:/EFI/BOOT/arm64-efi/ \
+    grub-efi-bootaa64.efi:/EFI/BOOT/bootaa64.efi \
+    grub.cfg:/EFI/BOOT/grub.cfg \
+    "
+
 RESIN_IMAGE_BOOTLOADER_qemux86 = "grub"
 RESIN_BOOT_PARTITION_FILES_qemux86 = " \
     ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
