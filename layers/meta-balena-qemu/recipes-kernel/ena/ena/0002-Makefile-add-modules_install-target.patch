@@ -1,0 +1,24 @@
+From 4dab07314ae738e9d9e31bf3146413d98a38f37c Mon Sep 17 00:00:00 2001
+From: Joseph Kogut <joseph.kogut@gmail.com>
+Date: Thu, 29 Oct 2020 12:43:23 -0700
+Subject: [PATCH] Makefile: add modules_install target
+
+Signed-off-by: Joseph Kogut <joseph.kogut@gmail.com>
+---
+ Makefile | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/Makefile b/Makefile
+index a0f401f..7a71750 100644
+--- a/Makefile
++++ b/Makefile
+@@ -41,3 +41,6 @@ all:
+ 
+ clean:
+ 	$(MAKE) -C $(KERNEL_SRC) M=$(CURDIR) clean
++
++modules_install:
++	$(MAKE) -C $(KERNEL_SRC) M=$(CURDIR) modules_install
+-- 
+2.29.1
+

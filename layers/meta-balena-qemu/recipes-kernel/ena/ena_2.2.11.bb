@@ -6,10 +6,8 @@ inherit module
 
 SRC_URI = "git://github.com/amzn/amzn-drivers.git \
            file://0001-support-for-KERNEL_SRC-in-Makefile.patch \
+           file://0002-Makefile-add-modules_install-target.patch \
            "
 SRCREV = "aaea12bc38eff15c48e158fedd367cf36fac5e18"
 S = "${WORKDIR}/git/kernel/linux/ena"
 
-do_install() {
-    # TODO
-}
