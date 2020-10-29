@@ -1,0 +1,23 @@
+From 15bbb30d19c4aba52eec548bc0908454329d985d Mon Sep 17 00:00:00 2001
+From: Kyle Harding <kyle@balena.io>
+Date: Thu, 29 Oct 2020 15:19:54 +0000
+Subject: [PATCH] support for KERNEL_SRC in Makefile
+
+---
+ Makefile | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index b74e81a..a0f401f 100644
+--- a/Makefile
++++ b/Makefile
+@@ -37,7 +37,7 @@ ifdef UBUNTU_ABI
+ endif
+ 
+ all:
+-	$(MAKE) -C /lib/modules/$(BUILD_KERNEL)/build M=$(CURDIR) modules
++	$(MAKE) -C $(KERNEL_SRC) M=$(CURDIR) modules
+ 
+ clean:
+-	$(MAKE) -C /lib/modules/$(BUILD_KERNEL)/build M=$(CURDIR) clean
++	$(MAKE) -C $(KERNEL_SRC) M=$(CURDIR) clean
