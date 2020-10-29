@@ -11,3 +11,4 @@ SRC_URI = "git://github.com/amzn/amzn-drivers.git \
 SRCREV = "aaea12bc38eff15c48e158fedd367cf36fac5e18"
 S = "${WORKDIR}/git/kernel/linux/ena"
 
+KERNEL_MODULE_AUTOLOAD="ena"
