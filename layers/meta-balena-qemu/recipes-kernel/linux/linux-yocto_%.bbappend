@@ -18,6 +18,8 @@ RESIN_CONFIGS_append = " squashfs"
 RESIN_CONFIGS_append_qemuarm64 = " ec2"
 
 RESIN_CONFIGS[ec2] = " \
+    CONFIG_SERIAL_8250=y \
+    CONFIG_SERIAL_8250_CONSOLE=y \
     CONFIG_BLK_DEV_NVME=y \
     "
 
