@@ -1,0 +1,147 @@
+From 0b6e875fbe36f5d98320112664228069dc217b4b Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Robert=20G=C3=BCnzler?= <r@gnzler.io>
+Date: Mon, 2 Nov 2020 18:53:50 +0100
+Subject: [PATCH] seccompagent: catch uname instead
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Robert Günzler <robertg@balena.io>
+---
+ contrib/cmd/seccompagent/seccompagent.go | 51 +++++++++++-------------
+ 1 file changed, 23 insertions(+), 28 deletions(-)
+
+diff --git a/contrib/cmd/seccompagent/seccompagent.go b/contrib/cmd/seccompagent/seccompagent.go
+index d2d3098f..e3334ea2 100644
+--- a/contrib/cmd/seccompagent/seccompagent.go
++++ b/contrib/cmd/seccompagent/seccompagent.go
+@@ -26,7 +26,7 @@ func init() {
+ 	flag.StringVar(&socketFile, "socketfile", "/run/seccomp-agent.socket", "Socket file")
+ }
+ 
+-func handleNewMessage(sockfd int) (*os.File, error) {
++func handleNewMessage(sockfd int) (*os.File, *specs.SeccompState, error) {
+ 	MaxNameLen := 4096
+ 	oobSpace := unix.CmsgSpace(4)
+ 	stateBuf := make([]byte, 4096)
+@@ -34,10 +34,10 @@ func handleNewMessage(sockfd int) (*os.File, error) {
+ 
+ 	n, oobn, _, _, err := unix.Recvmsg(sockfd, stateBuf, oob, 0)
+ 	if err != nil {
+-		return nil, err
++		return nil, nil, err
+ 	}
+ 	if n >= MaxNameLen || oobn != oobSpace {
+-		return nil, fmt.Errorf("recvfd: incorrect number of bytes read (n=%d oobn=%d)", n, oobn)
++		return nil, nil, fmt.Errorf("recvfd: incorrect number of bytes read (n=%d oobn=%d)", n, oobn)
+ 	}
+ 
+ 	// Truncate.
+@@ -47,29 +47,29 @@ func handleNewMessage(sockfd int) (*os.File, error) {
+ 	seccompState := &specs.SeccompState{}
+ 	err = json.Unmarshal(stateBuf, seccompState)
+ 	if err != nil {
+-		return nil, fmt.Errorf("cannot parse OCI state: %v\n", err)
++		return nil, nil, fmt.Errorf("cannot parse OCI state: %v\n", err)
+ 	}
+ 	fmt.Printf("%v\n", seccompState)
+ 
+ 	scms, err := unix.ParseSocketControlMessage(oob)
+ 	if err != nil {
+-		return nil, err
++		return nil, nil, err
+ 	}
+ 	if len(scms) != 1 {
+-		return nil, fmt.Errorf("recvfd: number of SCMs is not 1: %d", len(scms))
++		return nil, nil, fmt.Errorf("recvfd: number of SCMs is not 1: %d", len(scms))
+ 	}
+ 	scm := scms[0]
+ 
+ 	fds, err := unix.ParseUnixRights(&scm)
+ 	if err != nil {
+-		return nil, err
++		return nil, nil, err
+ 	}
+ 	if len(fds) != 1 {
+-		return nil, fmt.Errorf("recvfd: number of fds is not 1: %d", len(fds))
++		return nil, nil, fmt.Errorf("recvfd: number of fds is not 1: %d", len(fds))
+ 	}
+ 	fd := uintptr(fds[0])
+ 
+-	return os.NewFile(fd, "seccomp-fd"), nil
++	return os.NewFile(fd, "seccomp-fd"), seccompState, nil
+ }
+ 
+ func readArgString(pid uint32, offset int64) (string, error) {
+@@ -107,9 +107,11 @@ func runMkdirForContainer(pid uint32, fileName string, mode uint32) error {
+ }
+ 
+ // notifHandler handles seccomp notifications and responses
+-func notifHandler(fd libseccomp.ScmpFd) {
++func notifHandler(fd libseccomp.ScmpFd, state *specs.SeccompState) {
+ 	defer syscall.Close(int(fd))
+ 	for {
++		// TODO can poll state.PidFd to know when we can return
++
+ 		req, err := libseccomp.NotifReceive(fd)
+ 		if err != nil {
+ 			fmt.Printf("Error in NotifReceive(): %s", err)
+@@ -120,7 +122,12 @@ func notifHandler(fd libseccomp.ScmpFd) {
+ 			fmt.Printf("Error in decoding syscall %v(): %s", req.Data.Syscall, err)
+ 			return
+ 		}
+-		fmt.Printf("Received syscall %q, pid %v, arch %q, args %+v\n", syscallName, req.Pid, req.Data.Arch, req.Data.Args)
++		fmt.Printf("Received syscall %q, containerid: %v, pid %v, arch %q, args %+v\n",
++			syscallName,
++			req.State.ID, // container id
++			req.Pid,
++			req.Data.Arch,
++			req.Data.Args)
+ 
+ 		// TOCTOU check
+ 		if err := libseccomp.NotifIDValid(fd, req.ID); err != nil {
+@@ -136,21 +143,9 @@ func notifHandler(fd libseccomp.ScmpFd) {
+ 		}
+ 
+ 		switch syscallName {
+-		case "mkdir":
+-			fileName, err := readArgString(req.Pid, int64(req.Data.Args[0]))
+-			if err != nil {
+-				fmt.Printf("Cannot read argument: %s", err)
+-			} else {
+-				fmt.Printf("mkdir: %q\n", fileName)
+-			}
+-			err = runMkdirForContainer(req.Pid, fileName, uint32(req.Data.Args[1]))
+-			if err != nil {
+-				resp.Error = int32(syscall.ENOSYS)
+-				resp.Val = ^uint64(0) // -1
+-			}
+-			resp.Flags = 0
+-		case "chmod":
+-			resp.Error = int32(syscall.ENOMEDIUM)
++		case "uname":
++			// TODO figure out platform based on container id
++			resp.Error = int32(syscall.ENOSPC)
+ 			resp.Val = ^uint64(0) // -1
+ 			resp.Flags = 0
+ 		}
+@@ -191,14 +186,14 @@ func main() {
+ 			panic(fmt.Errorf("cannot get socket: %v\n", err))
+ 		}
+ 
+-		newFd, err := handleNewMessage(int(socket.Fd()))
++		newFd, seccompState, err := handleNewMessage(int(socket.Fd()))
+ 		if err != nil {
+ 			fmt.Printf("%s\n", err)
+ 		}
+ 		socket.Close()
+ 
+ 		fmt.Printf("Received new seccomp fd: %v\n", newFd.Fd())
+-		go notifHandler(libseccomp.ScmpFd(newFd.Fd()))
++		go notifHandler(libseccomp.ScmpFd(newFd.Fd()), seccompState)
+ 	}
+ 
+ }
+-- 
+2.26.2
+

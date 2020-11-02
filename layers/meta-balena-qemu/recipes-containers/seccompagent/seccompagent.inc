@@ -1,0 +1,68 @@
+HOMEPAGE = "https://github.com/kinvolk/runc/contrib/cmd/seccompagent"
+SUMMARY = "syscall admission control using seccomp-notify and runc"
+DESCRIPTION = "Control what syscalls a container can execute and/or what they do."
+
+SRCREV = "7b63ac697195c5beb40bd902f3af7279900fed6a"
+SRC_URI = " \
+    git://github.com/kinvolk/runc;branch=master \
+    file://0001-Makefile-respect-GOBUILDFLAGS-for-runc-and-remove-re.patch \
+    "
+RUNC_VERSION = "1.0.0-rc92+seccomp-notify"
+
+# Apache-2.0 for containerd
+LICENSE = "Apache-2.0"
+LIC_FILES_CHKSUM = "file://src/import/LICENSE;md5=435b266b3899aa8a959f17d41c56def8"
+
+S = "${WORKDIR}/git"
+
+PV = "${RUNC_VERSION}+git${SRCPV}"
+
+inherit go
+inherit goarch
+inherit pkgconfig
+
+PACKAGECONFIG = "seccomp,,libseccomp"
+
+GO_IMPORT = "import"
+
+LIBCONTAINER_PACKAGE="github.com/opencontainers/runc/libcontainer"
+
+do_configure[noexec] = "1"
+EXTRA_OEMAKE="BUILDTAGS='${PACKAGECONFIG_CONFARGS}' GO=${GO}"
+
+do_compile() {
+	# Set GOPATH. See 'PACKAGERS.md'. Don't rely on
+	# docker to download its dependencies but rather
+	# use dependencies packaged independently.
+	cd ${S}/src/import
+	rm -rf .gopath
+	dname=`dirname "${LIBCONTAINER_PACKAGE}"`
+	bname=`basename "${LIBCONTAINER_PACKAGE}"`
+	mkdir -p .gopath/src/${dname}
+
+	(cd .gopath/src/${dname}; ln -sf ../../../../../${bname} ${bname})
+	export GOPATH="${S}/src/import/.gopath:${S}/src/import/vendor:${STAGING_DIR_TARGET}/${prefix}/local/go"
+
+	# Fix up symlink for go-cross compiler
+	rm -f ${S}/src/import/vendor/src
+	ln -sf ./ ${S}/src/import/vendor/src
+
+	# Pass the needed cflags/ldflags so that cgo
+	# can find the needed headers files and libraries
+	export CGO_ENABLED="1"
+	export CGO_CFLAGS="${CFLAGS} --sysroot=${STAGING_DIR_TARGET}"
+	export CGO_LDFLAGS="${LDFLAGS} --sysroot=${STAGING_DIR_TARGET}"
+	export GO=${GO}
+
+	export CFLAGS=""
+	export LDFLAGS=""
+
+	oe_runmake seccomphook seccompagent
+}
+
+do_install() {
+	mkdir -p ${D}/${bindir}
+
+	cp ${S}/src/import/seccomphook ${D}/${bindir}/seccomphook
+	cp ${S}/src/import/seccompagent ${D}/${bindir}/seccompagent
+}
