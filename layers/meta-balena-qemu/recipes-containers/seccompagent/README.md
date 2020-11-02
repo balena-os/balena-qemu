@@ -1,6 +1,9 @@
 # seccompagent
 
-1. setup docker to run oci hooks using [oci-add-hooks](https://github.com/awslabs/oci-add-hooks)
+
+1. ~~setup docker to run oci hooks using [oci-add-hooks](https://github.com/awslabs/oci-add-hooks)~~
+
+**NOTE**: won't work since oci-add-hooks doesn't know about the new `sendSeccompFd` hook
 
 add this into `/etc/balena/daemon.json`:
 
