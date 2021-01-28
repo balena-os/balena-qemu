@@ -24,7 +24,6 @@ module.exports =
 	name: 'QEMU X86 32bit'
 	arch: 'i386'
 	state: 'released'
-	private: false
 
 	instructions: [
 		QEMU_RUNNING_INSTRUCTIONS
@@ -39,7 +38,7 @@ module.exports =
 		machine: 'qemux86'
 		image: 'resin-image'
 		fstype: 'resinos-img'
-		version: 'yocto-warrior'
+		version: 'yocto-dunfell'
 		deployArtifact: 'resin-image-qemux86.resinos-img'
 		compressed: true
 
