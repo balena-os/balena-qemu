@@ -14,6 +14,7 @@ RESIN_BOOT_PARTITION_FILES_qemux86-64 = " \
     ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
     grub:/grub/ \
     grub/i386-pc:/grub/i386-pc/ \
+    grubenv:/grub/grubenv \
     "
 
 #
