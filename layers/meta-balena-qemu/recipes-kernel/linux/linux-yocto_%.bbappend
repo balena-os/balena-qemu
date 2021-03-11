@@ -1,8 +1,8 @@
 inherit kernel-resin
 
-RESIN_CONFIGS_append = " gcp"
+BALENA_CONFIGS_append = " gcp"
 
-RESIN_CONFIGS[gcp] = " \
+BALENA_CONFIGS[gcp] = " \
     CONFIG_KVM_GUEST=y \
     CONFIG_VIRTIO_PCI=y \
     CONFIG_SCSI_VIRTIO=y \
@@ -10,9 +10,9 @@ RESIN_CONFIGS[gcp] = " \
     CONFIG_PCI_MSI=y \
     "
 
-RESIN_CONFIGS_append = " squashfs"
+BALENA_CONFIGS_append = " squashfs"
 
-RESIN_CONFIGS[squashfs] = " \
+BALENA_CONFIGS[squashfs] = " \
     CONFIG_SQUASHFS=m \
     CONFIG_SQUASHFS_FILE_DIRECT=y \
     CONFIG_SQUASHFS_DECOMP_MULTI=y \
