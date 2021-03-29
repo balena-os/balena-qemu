@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update getting started links
+      hash: 09278026e4e86448aa93582b6533e40aa1aa65b5
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update getting started links
+        changelog-entry: Update getting started links
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.72.0+rev2
+  date: 2021-03-29T19:24:08.118Z
+- commits:
     - subject: Rename resin image types to balena
       hash: ef4fddbb136f8acd6f8b2cbdc80f23731fee6d67
       body: |

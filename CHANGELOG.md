@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.72.0+rev2
+## (2021-03-29)
+
+* Update getting started links [Kyle Harding]
+
 # v2.72.0+rev1
 ## (2021-03-11)
 
