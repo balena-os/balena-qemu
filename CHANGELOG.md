@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.72.0+rev2
+## (2021-03-30)
+
+* Fix outdated getting started urls [Thodoris Greasidis]
+
 # v2.72.0+rev1
 ## (2021-03-11)
 

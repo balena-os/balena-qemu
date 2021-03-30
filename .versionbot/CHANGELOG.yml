@@ -1,4 +1,21 @@
 - commits:
+    - subject: Fix outdated getting started urls
+      hash: 965e8d5ba42825c9c0a33477578fb2bbf378c78e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Fix outdated getting started urls
+        changelog-entry: Fix outdated getting started urls
+        HQ: 'https://github.com/balena-io/balena-io/issues/2360'
+        hq: 'https://github.com/balena-io/balena-io/issues/2360'
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+  version: 2.72.0+rev2
+  date: 2021-03-30T13:02:47.828Z
+- commits:
     - subject: Rename resin image types to balena
       hash: ef4fddbb136f8acd6f8b2cbdc80f23731fee6d67
       body: |
