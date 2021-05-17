@@ -68,4 +68,4 @@ PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 
 CONF_VERSION = "1"
 
-HOSTTOOLS += "docker iptables"
+HOSTTOOLS += "docker iptables newuidmap newgidmap ip ps"
