@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.18+rev2
+## (2021-10-18)
+
+* Update autohat to v0.2.3 [Alex Gonzalez]
+
 # v2.83.18+rev1
 ## (2021-10-18)
 

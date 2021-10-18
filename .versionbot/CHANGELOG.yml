@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update autohat to v0.2.3
+      hash: 601e5e4be2c40ebb241dcd8cbbe46796f962806a
+      body: |
+        Update autohat from versin 0.1.1 to 0.2.3
+      footer:
+        Changelog-entry: Update autohat to v0.2.3
+        changelog-entry: Update autohat to v0.2.3
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.83.18+rev2
+  date: 2021-10-18T14:41:47.128Z
+- commits:
     - subject: Update meta-balena from v2.72.10 to v2.83.18
       hash: 44acba22c712c947c5d794d1f71d0458dd57f222
       body: |
