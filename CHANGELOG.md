@@ -1,6 +1,720 @@
 Change log
 -----------
 
+# v2.83.18+rev1
+## (2021-10-18)
+
+
+<details>
+<summary> Update meta-balena from v2.72.10 to v2.83.18 [Alex Gonzalez] </summary>
+
+> ## meta-balena-2.83.18
+> ### (2021-08-31)
+> 
+> 
+> <details>
+> <summary> balena-supervisor: Update balena-supervisor to v12.10.3 [Kyle Harding] </summary>
+> 
+>> ### balena-supervisor-12.10.3
+>> #### (2021-08-24)
+>> 
+>> * Skip restarting services if they are part of conf targets [Kyle Harding]
+>> 
+>> ### balena-supervisor-12.10.2
+>> #### (2021-08-02)
+>> 
+>> * Removed fire emoji prefix for firewall logs. [peakyDicers]
+>> 
+>> ### balena-supervisor-12.10.1
+>> #### (2021-08-02)
+>> 
+>> * Fix regression with local mode push [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-12.10.0
+>> #### (2021-07-28)
+>> 
+>> * Remove comparison based on image, release, and service ids [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-12.9.6
+>> #### (2021-07-26)
+>> 
+>> * Use tags to track supervised images in docker [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-12.9.5
+>> #### (2021-07-22)
+>> 
+>> * Log the delta URL that will be downloaded on update [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-12.9.4
+>> #### (2021-07-08)
+>> 
+>> * Fix db-helper module for tests [Felipe Lalanne]
+>> 
+> </details>
+> 
+> 
+> ## meta-balena-2.83.17
+> ### (2021-08-31)
+> 
+> * Assign a fixed name to the balena-healthcheck container [Kyle Harding]
+> 
+> ## meta-balena-2.83.16
+> ### (2021-08-31)
+> 
+> * kernel-modules-headers: Copy module.lds [Alex Gonzalez]
+> 
+> ## meta-balena-2.83.15
+> ### (2021-08-30)
+> 
+> * kernel-balena: remove global blacklist of btrfs [Joseph Kogut]
+> 
+> ## meta-balena-2.83.14
+> ### (2021-08-26)
+> 
+> * tests: remove reboot requirement from NTP server test [Mark Corbin]
+> * recipes-connectivity: fix auto-update when config.json changes [Mark Corbin]
+> 
+> ## meta-balena-2.83.13
+> ### (2021-08-26)
+> 
+> * networkmanager: fix hostname race condition [Mark Corbin]
+> 
+> ## meta-balena-2.83.12
+> ### (2021-08-25)
+> 
+> * tests: remove reboot requirement from hostname test [Mark Corbin]
+> * hostname: update system hostname when config.json changes [Mark Corbin]
+> 
+> ## meta-balena-2.83.11
+> ### (2021-08-24)
+> 
+> * linux-firmware: Use wildcards when selecting files to package [Alex Gonzalez]
+> * linux-firmware: Add firmware compression support [Alex Gonzalez]
+> * kernel-balena: Support firmware compression from kernel version 5.3 [Alex Gonzalez]
+> 
+> ## meta-balena-2.83.10
+> ### (2021-08-18)
+> 
+> * kernel-balena: Add function to conditionally configure based on version [Alex Gonzalez]
+> * kernel-balena: Split function to get kernel version from source [Alex Gonzalez]
+> * kernel-resin: Add as symlink to kernel-balena [Alex Gonzalez]
+> * kernel-balena: Replace and deprecate kernel-resin [Alex Gonzalez]
+> 
+> ## meta-balena-2.83.9
+> ### (2021-08-17)
+> 
+> * recipes-connectivity: improve NTP dispatcher script [Mark Corbin]
+> 
+> ## meta-balena-2.83.8
+> ### (2021-08-17)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v19.03.24 [Alex Gonzalez] </summary>
+> 
+>> ### balena-engine-19.03.24
+>> #### (2021-08-12)
+>> 
+>> * prevent slice oob access in concatReadSeekCloser [Martin Rauscher]
+>> 
+> </details>
+> 
+> 
+> ## meta-balena-2.83.7
+> ### (2021-08-14)
+> 
+> * grub: don't package or install bindir utils [Joseph Kogut]
+> 
+> ## meta-balena-2.83.6
+> ### (2021-08-13)
+> 
+> * balena-os-sysctl: disable user namespacing by default [Joseph Kogut]
+> * common: kernel-resin: enable user namespacing [Joseph Kogut]
+> 
+> ## meta-balena-2.83.5
+> ### (2021-08-13)
+> 
+> * resin-u-boot.bbclass: Make console silencing change more resilient [Florin Sarbu]
+> 
+> ## meta-balena-2.83.4
+> ### (2021-08-11)
+> 
+> * balena-os: pin linux-firmware to 20210511 from hardknott [Joseph Kogut]
+> * linux-firmware: upgrade 20190815 -> 20210511 [Joseph Kogut]
+> 
+> ## meta-balena-2.83.3
+> ### (2021-08-05)
+> 
+> * supervisor: Consolidate supervisor container removal [Kyle Harding]
+> 
+> ## meta-balena-2.83.2
+> ### (2021-08-05)
+> 
+> * tests: Fix insecure registry error [Robert Günzler]
+> 
+> ## meta-balena-2.83.1
+> ### (2021-07-31)
+> 
+> * linux-firmware: package i915 generations separately [Joseph Kogut]
+> 
+> ## meta-balena-2.83.0
+> ### (2021-07-29)
+> 
+> * Add support for rootfs on MD RAID1 [Michal Toman]
+> 
+> ## meta-balena-2.82.13
+> ### (2021-07-29)
+> 
+> * tests: Symlink /dev/null instead of copying bash to break services [Michal Toman]
+> 
+> ## meta-balena-2.82.12
+> ### (2021-07-24)
+> 
+> * common: grub: don't install sbin utils [Joseph Kogut]
+> 
+> ## meta-balena-2.82.11
+> ### (2021-07-21)
+> 
+> * tests: Remove journalctl line limit from hup suite [Kyle Harding]
+> * tests: Enable rollback tests in hup suite [Kyle Harding]
+> * tests: Update smoke test conditions [Kyle Harding]
+> * tests: Add rollback tests to HUP suite [Kyle Harding]
+> * rollback-altboot: Fix minor typo in log message [Kyle Harding]
+> 
+> ## meta-balena-2.82.10
+> ### (2021-07-20)
+> 
+> * tests: Remove reboot requirement from dnsmasq tests [Kyle Harding]
+> 
+> ## meta-balena-2.82.9
+> ### (2021-07-16)
+> 
+> * patch: Make OS test suite compatible with current helpers [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## meta-balena-2.82.8
+> ### (2021-07-16)
+> 
+> * kernel-devsrc: Add upstream recipe from hardknott-3.3.1 for dunfell [Florin Sarbu]
+> 
+> ## meta-balena-2.82.7
+> ### (2021-07-15)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v19.03.23 [Leandro Motta Barros] </summary>
+> 
+>> ### balena-engine-19.03.23
+>> #### (2021-07-12)
+>> 
+>> * Make layer download resuming more resilient [Leandro Motta Barros]
+>> 
+>> ### balena-engine-19.03.22
+>> #### (2021-06-30)
+>> 
+>> * Drop CODEOWNERS [Robert Günzler]
+>> 
+>> ### balena-engine-19.03.21
+>> #### (2021-06-25)
+>> 
+>> * Lock destination layers while delta is being processed [Robert Günzler]
+>> 
+>> ### balena-engine-19.03.20
+>> #### (2021-06-17)
+>> 
+>> * pkg/storagemigration: poperly handle errors during state creation [Robert Günzler]
+>> 
+>> ### balena-engine-19.03.19
+>> #### (2021-06-10)
+>> 
+>> * pkg/storagemigration: allow writing logs to separate file [Robert Günzler]
+>> * storagemigration: defer commit to next start [Robert Günzler]
+>> 
+> </details>
+> 
+> 
+> ## meta-balena-2.82.6
+> ### (2021-07-15)
+> 
+> * dnsmasq: Restart when config.json changes [Kyle Harding]
+> * balena-config-vars: Restart target when config.json changes [Kyle Harding]
+> * balena-config-vars: Add config-json.target service [Kyle Harding]
+> * balena-config-vars: Restore null as valid for dnsServers [Kyle Harding]
+> 
+> ## meta-balena-2.82.5
+> ### (2021-07-15)
+> 
+> * kernel-headers-test: Update base image to buster [Florin Sarbu]
+> 
+> ## meta-balena-2.82.4
+> ### (2021-07-14)
+> 
+> * tests: Add hup test suite [Robert Günzler]
+> 
+> ## meta-balena-2.82.3
+> ### (2021-07-13)
+> 
+> * Check that the hostapp image fits the inactive partion on HUP [Alex Gonzalez]
+> * image-balena: Add check for docker image size [Alex Gonzalez]
+> * balena-image: Break down the rootfs image size calculation [Alex Gonzalez]
+> * image_types_balena: Add rootfs size calculation function [Alex Gonzalez]
+> 
+> ## meta-balena-2.82.2
+> ### (2021-07-13)
+> 
+> * Update balena-supervisor from v12.8.8 to v12.9.3 [Miguel Casqueira]
+> 
+> ## meta-balena-2.82.1
+> ### (2021-07-12)
+> 
+> * balena-hostname: add comments and improve logging [Mark Corbin]
+> * meta-balena: rename resin-hostname to balena-hostname [Mark Corbin]
+> 
+> ## meta-balena-2.82.0
+> ### (2021-07-10)
+> 
+> * networkmanager: Rename references to resin [Kyle Harding]
+> * resin-proxy-config: Rename to balena-proxy-config [Kyle Harding]
+> * resin-ntp-config: Rename to balena-ntp-config [Kyle Harding]
+> * resin-net-config: Rename to balena-net-config [Kyle Harding]
+> 
+> ## meta-balena-2.81.1
+> ### (2021-07-09)
+> 
+> * balena-engine: Restore previous systemd service settings [Kyle Harding]
+> 
+> ## meta-balena-2.81.0
+> ### (2021-07-06)
+> 
+> * recipes-core: add a 'network connectivity wait' service [Mark Corbin]
+> 
+> ## meta-balena-2.80.12
+> ### (2021-07-05)
+> 
+> * Remove CODEOWNERS [Michal Toman]
+> 
+> ## meta-balena-2.80.11
+> ### (2021-07-01)
+> 
+> * get journal logs at the end of the suite [rcooke-warwick]
+> 
+> ## meta-balena-2.80.10
+> ### (2021-06-24)
+> 
+> * hostapp-update-hooks: Migrate supervisor database [Kyle Harding]
+> * hostapp-update-hooks: Revert sv database path used by previous hooks [Kyle Harding]
+> 
+> ## meta-balena-2.80.9
+> ### (2021-06-21)
+> 
+> * balena-engine: refactor systemd service [Robert Günzler]
+> 
+> ## meta-balena-2.80.8
+> ### (2021-06-21)
+> 
+> * Update balena-supervisor from v12.8.7 to v12.8.8 [Florin Sarbu]
+> 
+> ## meta-balena-2.80.7
+> ### (2021-06-18)
+> 
+> * prevent failed teardown from making test hang [rcooke-warwick]
+> 
+> ## meta-balena-2.80.6
+> ### (2021-06-17)
+> 
+> * catch error if image path is corrupted [rcooke-warwick]
+> 
+> ## meta-balena-2.80.5
+> ### (2021-06-17)
+> 
+> * update-balena-supervisor: Improve obtaining the supervisor directory name [Alexandru Costache]
+> * Update balena-supervisor from v12.7.0 to v12.8.7 [Miguel Casqueira]
+> 
+> ## meta-balena-2.80.4
+> ### (2021-06-14)
+> 
+> * kernel-headers-test: simplify example module Makefile [Joseph Kogut]
+> 
+> ## meta-balena-2.80.3
+> ### (2021-06-10)
+> 
+> * Add oneshot service to migrate supervisor state config [Kyle Harding]
+> 
+> ## meta-balena-2.80.2
+> ### (2021-06-09)
+> 
+> * update-balena-supervisor: Refactor script to ensure target version is ran [Alexandru Costache]
+> 
+> ## meta-balena-2.80.1
+> ### (2021-06-07)
+> 
+> * bluez5: Disable PnP Device Information service [Zahari Petkov]
+> 
+> ## meta-balena-2.80.0
+> ### (2021-06-07)
+> 
+> * Revert Go 1.16 recipes [Joseph Kogut]
+> 
+> ## meta-balena-2.79.10
+> ### (2021-06-03)
+> 
+> * supervisor: Remove symlink to legacy resin sysconfig [Kyle Harding]
+> * hostapp-update-hooks: Migrate resin-supervisor to balena-supervisor [Kyle Harding]
+> * supervisor: Remove legacy resin supervisor container [Kyle Harding]
+> 
+> ## meta-balena-2.79.9
+> ### (2021-06-03)
+> 
+> * hostapp-update-hooks: Sync to disk when hook is done [Alex Gonzalez]
+> * extract-balena-ca: Sync changes to disk in case of power loss [Alex Gonzalez]
+> * resin-net-config: Make sure to sync changes to disk in case of power loss [Alex Gonzalez]
+> 
+> ## meta-balena-2.79.8
+> ### (2021-06-02)
+> 
+> * bluez: Set policy configuration to AutoEnable [Alex Gonzalez]
+> * bluez5: Replace executable path directory in unit file [Alex Gonzalez]
+> 
+> ## meta-balena-2.79.7
+> ### (2021-05-26)
+> 
+> * meta-balena: rename connectivity packagegroup [Mark Corbin]
+> 
+> ## meta-balena-2.79.6
+> ### (2021-05-26)
+> 
+> * bluez5: Use bluez5 recipe from poky master [Zahari Petkov]
+> 
+> ## meta-balena-2.79.5
+> ### (2021-05-21)
+> 
+> * README: Update supported Yocto versions [Alex Gonzalez]
+> 
+> ## meta-balena-2.79.4
+> ### (2021-05-21)
+> 
+> * Skip some services when running under docker [Robert Günzler]
+> 
+> ## meta-balena-2.79.3
+> ### (2021-05-20)
+> 
+> * kernel-resin: disable panic on hung task [Joseph Kogut]
+> 
+> ## meta-balena-2.79.2
+> ### (2021-05-19)
+> 
+> * Add boot-splash test to unmanaged suite [rcooke-warwick]
+> 
+> ## meta-balena-2.79.1
+> ### (2021-05-18)
+> 
+> * balena-os: Add preferred provider for Go native [Alex Gonzalez]
+> 
+> ## meta-balena-2.79.0
+> ### (2021-05-13)
+> 
+> * balena-engine: build in GOPATH mode [Joseph Kogut]
+> * recipes-devtools: go: backport get_linuxloader [Joseph Kogut]
+> * meta-resin-pyro: go-native: include fix-goarch.inc [Joseph Kogut]
+> * meta-balena-common: upgrade from go 1.12.17 to 1.16.2 [Joseph Kogut]
+> 
+> ## meta-balena-2.78.2
+> ### (2021-05-13)
+> 
+> * balena-config-vars: improve handling of NM config parameters [Mark Corbin]
+> 
+> ## meta-balena-2.78.1
+> ### (2021-05-12)
+> 
+> * Add Device Tree tests [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## meta-balena-2.78.0
+> ### (2021-05-10)
+> 
+> * Add symlinks and aliases for legacy resin namespaces [Kyle Harding]
+> * Rename resin-supervisor to balena-supervisor [Kyle Harding]
+> 
+> ## meta-balena-2.77.2
+> ### (2021-05-10)
+> 
+> 
+> <details>
+> <summary> Update balena-supservisor from v12.5.10 to v12.7.0 [Kyle Harding] </summary>
+> 
+>> ### balena-supervisor-12.7.0
+>> #### (2021-05-07)
+>> 
+>> * Backwards compatility changes for old resin namespaces [Kyle Harding]
+>> * Change container name to balena_supervisor [Kyle Harding]
+>> * Rename resin-supervisor to balena-supervisor [Kyle Harding]
+>> 
+>> ### balena-supervisor-12.6.8
+>> #### (2021-05-06)
+>> 
+>> * Show warning instead of exception for invalid network config [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-12.6.7
+>> #### (2021-05-06)
+>> 
+>> * Patch awaiting response when checking if supervisor0 network exists [Miguel Casqueira]
+>> 
+>> ### balena-supervisor-12.6.6
+>> #### (2021-05-06)
+>> 
+>> * Fix parsing driver_opts from compose to docker network creation [quentinGllmt]
+>> 
+>> ### balena-supervisor-12.6.5
+>> #### (2021-05-06)
+>> 
+>> 
+>> <details>
+>> <summary> Update balena-register-device and send extra info at provision time [Pagan Gazzard] </summary>
+>> 
+>>> #### balena-register-device-7.2.0
+>>> ##### (2021-04-29)
+>>> 
+>>> * Support `supervisorVersion`/`osVersion`/`osVariant`/`macAddress` fields [Pagan Gazzard]
+>>> 
+>>> #### balena-register-device-7.1.1
+>>> ##### (2021-04-29)
+>>> 
+>>> * Update dependencies [Pagan Gazzard]
+>>> 
+>>> #### balena-register-device-7.1.0
+>>> ##### (2020-07-13)
+>>> 
+>>> * Switch from randomstring to uuid for generating device uuids [Pagan Gazzard]
+>>> 
+>>> #### balena-register-device-7.0.1
+>>> ##### (2020-07-13)
+>>> 
+>>> * Add .versionbot/CHANGELOG.yml for nested changelogs [Pagan Gazzard]
+>>> 
+>>> #### balena-register-device-7.0.0
+>>> ##### (2020-07-06)
+>>> 
+>>> * Convert to type checked javascript [Pagan Gazzard]
+>>> * Drop callback interface in favor of promise interface [Pagan Gazzard]
+>>> * Switch to a named export [Pagan Gazzard]
+>>> * Convert to typescript [Pagan Gazzard]
+>>> * Update to typed-error 3.x [Pagan Gazzard]
+>>> * Switch to returning native promises [Pagan Gazzard]
+>>> * Update to balena-request 11.x [Pagan Gazzard]
+>>> * Use typescript import helpers [Pagan Gazzard]
+>>> 
+>> </details>
+>> 
+>> 
+>> ### balena-supervisor-12.6.4
+>> #### (2021-05-05)
+>> 
+>> * Log error responses from API when reporting state [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-12.6.3
+>> #### (2021-05-04)
+>> 
+>> * Added configurations.md to document all configurable vars [Miguel Casqueira]
+>> 
+>> ### balena-supervisor-12.6.2
+>> #### (2021-04-30)
+>> 
+>> * Remove version tag from livepush generated image [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-12.6.1
+>> #### (2021-04-27)
+>> 
+>> * Remove mz, mkdirp, body-parser dependencies [Christina Wang]
+>> 
+>> ### balena-supervisor-12.6.0
+>> #### (2021-04-27)
+>> 
+>> * Bump dockerode types to 2.5.34 [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-12.5.16
+>> #### (2021-04-27)
+>> 
+>> * Enable docker layer caching on CircleCI [Miguel Casqueira]
+>> 
+>> ### balena-supervisor-12.5.15
+>> #### (2021-04-26)
+>> 
+>> * Added clean step to remove previous builds before running tests [Miguel Casqueira]
+>> 
+>> ### balena-supervisor-12.5.14
+>> #### (2021-04-26)
+>> 
+>> * balena-supervisor: replace references to resin-vars [Mark Corbin]
+>> 
+>> ### balena-supervisor-12.5.13
+>> #### (2021-04-25)
+>> 
+>> * Update supervisor to typescript 4 [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-12.5.12
+>> #### (2021-04-20)
+>> 
+>> * Bump ssri from 6.0.1 to 6.0.2 [dependabot[bot]]
+>> 
+>> ### balena-supervisor-12.5.11
+>> #### (2021-04-14)
+>> 
+>> * Refactor extra_uEnv to not match with intel nuc [Miguel Casqueira]
+>> 
+> </details>
+> 
+> 
+> ## meta-balena-2.77.1
+> ### (2021-05-10)
+> 
+> * Update os-config from v1.2.0 to v1.2.1 [Kyle Harding]
+> 
+> ## meta-balena-2.77.0
+> ### (2021-05-05)
+> 
+> * grub update hook: move variables from grub.cfg to grubenv [Michal Toman]
+> 
+> ## meta-balena-2.76.0
+> ### (2021-04-30)
+> 
+> * kernel: Always include overlayfs support [Robert Günzler]
+> 
+> ## meta-balena-2.75.1
+> ### (2021-04-29)
+> 
+> * grub: grub-efi: buildin gzio for gz compressed kernels [Joseph Kogut]
+> 
+> ## meta-balena-2.75.0
+> ### (2021-04-22)
+> 
+> * Update mobynit to the new multi-container hostOS specification [Alex Gonzalez]
+> 
+> ## meta-balena-2.74.0
+> ### (2021-04-20)
+> 
+> * balena-engine: Update to 19.03.18 [Robert Günzler]
+> 
+> ## meta-balena-2.73.15
+> ### (2021-04-20)
+> 
+> * modemmanager:u-blox-switch: Rework the u-blox modem switch to ECM mode [Florin Sarbu]
+> 
+> ## meta-balena-2.73.14
+> ### (2021-04-19)
+> 
+> * device-progress: do not force an exit code [Matthew McGinn]
+> 
+> ## meta-balena-2.73.13
+> ### (2021-04-19)
+> 
+> * add retries to status check [rcooke-warwick]
+> 
+> ## meta-balena-2.73.12
+> ### (2021-04-16)
+> 
+> * meta-balena: rename resin-vars to balena-config-vars [Mark Corbin]
+> 
+> ## meta-balena-2.73.11
+> ### (2021-04-16)
+> 
+> * patch: Add strict bootcount count condition [Vipul Gupta (@vipulgupta2048)]
+> * patch: Reactivate Persistent Logging test [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## meta-balena-2.73.10
+> ### (2021-04-14)
+> 
+> * repo.yml: Move balena-supervisor reference to balena-os [Alex Gonzalez]
+> 
+> ## meta-balena-2.73.9
+> ### (2021-04-14)
+> 
+> * Update balena-supervisor from v12.5.6 to v12.5.10 [Christina Wang]
+> 
+> ## meta-balena-2.73.8
+> ### (2021-04-13)
+> 
+> * resin-mounts/etc-fake-hwclock: add dependency on resin-state services [Mark Corbin]
+> 
+> ## meta-balena-2.73.7
+> ### (2021-04-13)
+> 
+> * fix udev test indentation [rcooke-warwick]
+> * Added comments for easier debugging [rcooke-warwick]
+> * Fix old tests + add new tests based on testlodge [rcooke-warwick]
+> 
+> ## meta-balena-2.73.6
+> ### (2021-04-12)
+> 
+> * Add automated test checking for udev/resin_update_state_probe warnings [Michal Toman]
+> * udev: Silence warnings from resin_update_state_probe [Michal Toman]
+> 
+> ## meta-balena-2.73.5
+> ### (2021-04-06)
+> 
+> * Update balena-supervisor from v12.4.6 to v12.5.6 [Christina Wang]
+> 
+> ## meta-balena-2.73.4
+> ### (2021-03-20)
+> 
+> * Add to persistent logging defn [Andrew Nhem]
+> 
+> ## meta-balena-2.73.3
+> ### (2021-03-19)
+> 
+> * wifi: remove listed example as it's discontinued [Tomás Migone]
+> 
+> ## meta-balena-2.73.2
+> ### (2021-03-17)
+> 
+> * hostapp-update: convert absolute symlinks to relative [Joseph Kogut]
+> 
+> ## meta-balena-2.73.1
+> ### (2021-03-16)
+> 
+> * Update balena-supervisor from v12.3.5 to v12.4.6 [Felipe Lalanne]
+> 
+> ## meta-balena-2.73.0
+> ### (2021-03-15)
+> 
+> * image_types_balena: make rootfs labeling generic [Joseph Kogut]
+> * image_types_balena: make agnostic to root fstype [Joseph Kogut]
+> * mkfs-hostapp-native: make agnostic to fstype [Joseph Kogut]
+> 
+</details>
+
+
+<details>
+<summary> Update balena-yocto-scripts from v1.14.9 to v1.15.2 [Alex Gonzalez] </summary>
+
+> ## balena-yocto-scripts-1.15.2
+> ### (2021-10-01)
+> 
+> * balena-generate-ami.sh: correctly mount boot partition when injecting SSH key [Michal Toman]
+> 
+> ## balena-yocto-scripts-1.15.1
+> ### (2021-10-01)
+> 
+> * Update balena-cli to 12.50.1 [Michal Toman]
+> 
+> ## balena-yocto-scripts-1.15.0
+> ### (2021-10-01)
+> 
+> * jenkins_generate_ami.sh: Use lib function to get arch from config.json [Michal Toman]
+> * balena-generate-ami.sh: Look for boot partition by label rather than hardcoding p1 [Michal Toman]
+> * balena-generate-ami.sh: Fail if AMI already exists [Michal Toman]
+> * balena-generate-ami.sh: sync after writing config.json [Michal Toman]
+> * balena-generate-ami.sh: Stick to POSIX-compliant [ instead of [[ [Michal Toman]
+> * balena-generate-ami.sh: Remove useless statements [Michal Toman]
+> * jenkins_generate_ami.sh: Use architecture as suffix instead of machine name [Michal Toman]
+> * jenkins_build.sh: pass MACHINE to jenkins_generate_ami.sh [Michal Toman]
+> * AMI automation: Adjust AMI names to be compatible with AWS API [ab77]
+> * AMI automation: Correct S3 bucket name and key [ab77]
+> * AMI automation: Add a separate container for generaing AMI [Michal Toman]
+> * AMI automation: shellcheck and resolve violations [ab77]
+> * AMI automation: Use staging env by default [Tomás Tormo]
+> * AMI automation: Simplify public ssh addition. Do not use sudo [Tomás Tormo]
+> * automation: Generate and publish AMI from the raw balenaOS image [Tomás Tormo]
+> 
+</details>
+
 # v2.72.0+rev4
 ## (2021-09-24)
 
