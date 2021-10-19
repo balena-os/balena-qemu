@@ -6,11 +6,11 @@ QEMU_RUNNING_INSTRUCTIONS = '''
 	<br>
 	On systems with KVM support:
 	<br>
-	<code>qemu-system-x86_64 -drive file=balena-image-qemux86-64.img,media=disk,cache=none,format=raw -net nic,model=virtio -net user -m 512 -nographic -machine type=pc,accel=kvm -smp 4 -cpu host</code>
+	<code>qemu-system-x86_64 -device ahci,id=ahci -drive file=balena-image-qemux86-64.img,media=disk,cache=none,format=raw,if=none,id=disk -device ide-drive,drive=disk,bus=ahci.0 -net nic,model=virtio -net user -m 512 -nographic -machine type=pc,accel=kvm -smp 4 -cpu host</code>
 	<br>
 	On systems without KVM support:
 	<br>
-	<code>qemu-system-x86_64 -drive file=balena-image-qemux86-64.img,media=disk,cache=none,format=raw -net nic,model=virtio -net user -m 512 -nographic -machine type=pc -smp 4</code>
+	<code>qemu-system-x86_64 -device ahci,id=ahci -drive file=balena-image-qemux86-64.img,media=disk,cache=none,format=raw,if=none,id=disk  -device ide-drive,drive=disk,bus=ahci.0 -net nic,model=virtio -net user -m 512 -nographic -machine type=pc -smp 4</code>
 	<br>
 	Tweak <code>-smp</code> and <code>-cpu</code> parameters based on the CPU of the machine qemu is running on. <code>-cpu</code> parameter needs to be dropped on OSX and Windows.
 	<br>
