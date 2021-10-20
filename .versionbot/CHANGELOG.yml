@@ -1,4 +1,49 @@
 - commits:
+    - subject: Adjust machine definition files to use AHCI interfaces
+      hash: f2b989bd6b76fefb43e93331e48ae141f14a5b6b
+      body: >
+        By default qemu exposes disks as `/dev/hd*` which are unsupported by
+
+        the udev block setup scripts. The AHCI interface exposes them as
+        `/dev/sd*`
+
+        interfaces.
+      footer:
+        Changelog-entry: Adjust machine definition files to use AHCI interfaces
+        changelog-entry: Adjust machine definition files to use AHCI interfaces
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Remove hddimage and use balenaOS image instead
+      hash: 2c516a1f032c0235d49dc3da549396bf3ce5812d
+      body: |
+        This image bundle is unused and the balenaos-img needs to be adapted
+        instead.
+      footer:
+        Changelog-entry: Remove hddimage and use balenaOS image instead
+        changelog-entry: Remove hddimage and use balenaOS image instead
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Update grub to latest meta-balena recipes
+      hash: e9778571507b34511052ab5b2d9cab741245e49c
+      body: |
+        The grub package is now split and uses the grub-conf package for
+        configuration.
+
+        Adapt this device type to the corresponding grub recipes in meta-balena.
+      footer:
+        Changelog-entry: Update grub to latest meta-balena recipes
+        changelog-entry: Update grub to latest meta-balena recipes
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.83.18+rev3
+  date: 2021-10-19T16:37:57.340Z
+- commits:
     - subject: Update autohat to v0.2.3
       hash: 601e5e4be2c40ebb241dcd8cbbe46796f962806a
       body: |

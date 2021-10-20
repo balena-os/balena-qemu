@@ -1,6 +1,13 @@
 Change log
 -----------
 
+# v2.83.18+rev3
+## (2021-10-19)
+
+* Adjust machine definition files to use AHCI interfaces [Alex Gonzalez]
+* Remove hddimage and use balenaOS image instead [Alex Gonzalez]
+* Update grub to latest meta-balena recipes [Alex Gonzalez]
+
 # v2.83.18+rev2
 ## (2021-10-18)
 
