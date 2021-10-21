@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.83.18+rev4
+## (2021-10-20)
+
+* Enable console for development images [Alex Gonzalez]
+* Increase size of the data partition [Alex Gonzalez]
+
 # v2.83.18+rev3
 ## (2021-10-19)
 

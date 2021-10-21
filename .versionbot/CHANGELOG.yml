@@ -1,4 +1,37 @@
 - commits:
+    - subject: Enable console for development images
+      hash: 40c9abb5a1c6668441d48eb5ae66f92585b37b0b
+      body: |
+        This allows to see the boot output in a non-graphical boot.
+      footer:
+        Changelog-entry: Enable console for development images
+        changelog-entry: Enable console for development images
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Increase size of the data partition
+      hash: 9db190acf391546bd339ec9b562e77c5e0845d45
+      body: >
+        By default the data partition is only 192M but on a non-emulated device
+
+        it is expanded to the whole of the partition. On an emulated device it
+
+        does not expand so we need to set a bigger default so the device is
+        usable.
+
+
+        Fixes #158
+      footer:
+        Changelog-entry: Increase size of the data partition
+        changelog-entry: Increase size of the data partition
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.83.18+rev4
+  date: 2021-10-20T14:57:45.744Z
+- commits:
     - subject: Adjust machine definition files to use AHCI interfaces
       hash: f2b989bd6b76fefb43e93331e48ae141f14a5b6b
       body: >
