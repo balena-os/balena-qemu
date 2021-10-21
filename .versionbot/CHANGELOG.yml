@@ -1,4 +1,19 @@
 - commits:
+    - subject: use ide-hd instead of ide-drive
+      hash: 19ae9742da0b2605559f3d0209315603a33c022f
+      body: |
+        The `ide-drive` device was removed in v4.2.0, see:
+        https://github.com/qemu/qemu/commit/7d60133fcae8
+      footer:
+        Changelog-entry: use ide-hd instead of ide-drive
+        changelog-entry: use ide-hd instead of ide-drive
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.83.18+rev5
+  date: 2021-10-21T15:53:48.866Z
+- commits:
     - subject: Enable console for development images
       hash: 40c9abb5a1c6668441d48eb5ae66f92585b37b0b
       body: |

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.18+rev5
+## (2021-10-21)
+
+* use ide-hd instead of ide-drive [Alex Gonzalez]
+
 # v2.83.18+rev4
 ## (2021-10-20)
 
