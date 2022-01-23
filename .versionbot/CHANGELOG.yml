@@ -1,4 +1,240 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.17.0
+      hash: d13164d54d2229ea07742d6e83eb4d8eeacb42c5
+      body: |
+        Update balena-yocto-scripts from v1.16.1 to v1.17.0
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-yocto-scripts to v1.17.0
+        changelog-entry: Update balena-yocto-scripts to v1.17.0
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested:
+        - commits:
+            - subject: 'balena-lib: Fix fetching meta-balena base version'
+              hash: d5d838339ed23ecd242092bf4214fe2505ccd181
+              body: >
+                On an ESR branch the VERSION file contains the ESR version, not
+                the
+
+                base meta-balena version.
+
+
+                Replace it with searching down the git tree for the commit
+                before the
+
+                branch.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'jenkins_build-block: Use true/false for ESR variable'
+              hash: 24876740b2299d092ea3cd1b54f61a020d12a5ba
+              body: |
+                Keep the same boolean format as in the rest of the files.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'balena-deploy-block: Label ESR hostapps'
+              hash: 1c6561daf9f16e579d55305471274e7793dc3619
+              body: >
+                ESR hostapps need special labels in order to be recognized. This
+                commit
+
+                adds the esr-current, esr-next and esr-sunset labels.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'balena-api: add balena_api_fetch_fleet_tag'
+              hash: 2ced90fc432298abf14e00d4ac58cc8eaf003b24
+              body: |
+                Add a function to retrieve fleet tags.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'balena-api: Set policy on ESR hostapps'
+              hash: 6e4d7b3d2ccbd1a5c67d94cc73c4552775ce3b94
+              body: >
+                ESR hostapps need an esr release-policy in order to be
+                recognized.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'balena-deploy: Pass ESR variable when creating apps'
+              hash: 2497bfb59ae16810169718e6d383d0bc9d564a04
+              body: >
+                ESR hostapps need special labels in order to be recognized. This
+                allows
+
+                to add those flags when creating the hostapp.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.17.0
+          date: 2022-01-20T12:30:21.992Z
+        - commits:
+            - subject: >-
+                balena-deploy: Deploy passing the latest meta-balena version and
+                not tag
+              hash: 9d5fa316dbda3d4782e782abaceed41efe3e5a99
+              body: >
+                The last meta-balena version and tag might not be the same, like
+                in the
+
+                case of ESR branches.
+
+
+                Fixes #249
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'balena-lib: Add balena_lib_get_meta_balena_base_version'
+              hash: 25840dc98e138781e78530be0437f3950970f263
+              body: >
+                Retrieves the last meta-balena version, which may not be the
+                same as the
+
+                last meta-balena tag.
+
+
+                For example, when we branch an ESR release, the meta-balena
+                branch is
+
+                tagged with the ESR name, like 2.83.x, while the last
+                meta-balena version
+
+                will be a proper semver.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.16.4
+          date: 2022-01-18T09:50:54.889Z
+        - commits:
+            - subject: >-
+                balena-deploy-block: Check for existing tag only in specific
+                hostapp
+              hash: 8893fd94bc0cc31a7fa7af8a87af68a69fec908d
+              body: |
+                The same version tag can exist across different hostapps.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.16.3
+          date: 2022-01-17T17:18:11.734Z
+        - commits:
+            - subject: >-
+                balena-api: Propagate balena API environment, token and OS
+                organization
+              hash: 64c2854c85aafebf80e6a13b725ff610ae25a467
+              body: >
+                This is required to allow building against cloud instances with
+
+                different names for the balenaOS organization and private device
+                types.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'balena-build.sh: Propagate balena API environment and token'
+              hash: 35d39c4a400df0552bfb3d875c8a9d1289ad8d4e
+              body: |
+                This is required to use the API for private slugs.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'prepare-and-start: Propagate balena API environment and token'
+              hash: bb7b903e00fc153afea182a330da08a49b72cced
+              body: >
+                The balena-build.sh script accepts a token in the command line.
+                This
+
+                commit modifies the prepare-and-start.sh script to use it if
+
+                available, and also modifies it to take into account the balena
+
+                environment too.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.16.2
+          date: 2022-01-15T16:04:34.389Z
+    - subject: Update balena-yocto-scripts to v1.16.1
+      hash: 62cfea988f116920e06d0d17ec695a103ed5f7ab
+      body: |
+        Update balena-yocto-scripts from v1.16.0 to v1.16.1
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-yocto-scripts to v1.16.1
+        changelog-entry: Update balena-yocto-scripts to v1.16.1
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested:
+        - commits:
+            - subject: 'revert_overrides: Add intel-quark to architecture overrides'
+              hash: cbcbbc42c10700c77e17d8f9224e35bec90280fe
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.16.1
+          date: 2022-01-11T14:37:00.027Z
+  version: 2.83.18+rev8
+  date: 2022-01-23T17:53:25.452Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.16.0
       hash: 011be4653d10dc2f725a04a5532488160900d96e
       body: |
